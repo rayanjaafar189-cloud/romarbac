@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-900 text-slate-100" id="htmlRoot">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Balises Principales -->
+  <title>Romarbac — Préparation & Excellence Baccalauréat</title>
+  <meta name="description" content="Accédez aux cours, exercices et accompagnement sur-mesure sur Romarbac. Rejoignez notre programme d'excellence pour bacheliers." />
+  <meta name="keywords" content="Romarbac, romarbac, cours bac, exercices bac, révisions bac, mathématiques, orientation, soutien scolaire" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://romarbac.com/" />
+
+  <!-- Balises Open Graph (Partage Réseaux Sociaux) -->
+  <meta property="og:title" content="Romarbac — Réussite Bac & Orientation" />
+  <meta property="og:description" content="Soutien d'excellence, préparation intensive et accompagnement d'orientation pour les bacheliers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://romarbac.com/" />
+
+  <!-- Scripts et Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: { 
+            brand: { 50: '#eef2ff', 100: '#e0e7ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca' },
+            gold: { 400: '#facc15', 500: '#eab308' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- SDK Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, doc, getDocs, getDoc, setDoc, updateDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBieArCVShCovbrBRuTKvt6_L1P7u_h8kI",
+      authDomain: "romar-254fe.firebaseapp.com",
+      projectId: "romar-254fe",
+      storageBucket: "romar-254fe.firebasestorage.app",
+      messagingSenderId: "682318144389",
+      appId: "1:682318144389:web:86e7dc06eab64db2085aec",
+      measurementId: "G-MGYLSL94T7"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    window.db = db;
+    window.fs = { collection, doc, getDocs, getDoc, setDoc, updateDoc, deleteDoc };
+  </script>
+</head>
+<body class="min-h-full font-sans antialiased bg-slate-900 text-slate-100 dark:bg-slate-900 dark:text-slate-100 flex flex-col justify-between transition-colors duration-300" id="bodyRoot">
+
+  <!-- HERO & PAGE DE PRESENTATION / ACCUEIL -->
+  <div id="loginView" class="min-h-full flex flex-col justify-between p-4 sm:p-8 relative overflow-x-hidden">
+    
+    <!-- Effets de fond lumineux -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-brand-600/10 blur-[120px] pointer-events-none rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-amber-500/10 blur-[100px] pointer-events-none rounded-full"></div>
+
+    <!-- Header rapide / Logo -->
+    <header class="max-w-6xl mx-auto w-full flex items-center justify-between py-4 relative z-10">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white shadow-lg shadow-brand-600/30">
+          <i class="fa-solid fa-graduation-cap text-xl"></i>
+        </div>
+        <span class="text-2xl font-black tracking-tight text-white dark:text-white">Romarbac</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="toggleTheme()" class="px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-semibold transition backdrop-blur-md flex items-center gap-2" title="Changer le thème">
+          <i id="themeIconLanding" class="fa-solid fa-moon text-amber-400"></i>
+          <span class="hidden sm:inline">Thème</span>
+        </button>
+        <button onclick="openModal('quickLoginModal')" class="px-5 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-semibold transition backdrop-blur-md flex items-center gap-2">
+          <i class="fa-solid fa-user-check text-brand-400"></i>
+          <span>Connexion Élève</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SECTION PRINCIPALE -->
+    <main class="max-w-5xl mx-auto w-full py-12 sm:py-16 relative z-10 space-y-10 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs sm:text-sm font-medium backdrop-blur-md">
+        <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span>Saison 2 • Ouverture officielle aux bacheliers marocains</span>
+      </div>
+
+      <div class="space-y-4">
+        <h1 class="text-4xl sm:text-6xl font-black text-white dark:text-white tracking-tight leading-tight">
+          Viser l'Excellence au Bac & <br class="hidden sm:inline"/>
+          <span class="bg-gradient-to-r from-brand-400 via-indigo-300 to-amber-300 bg-clip-text text-transparent">Réussir son Orientation</span>
+        </h1>
+        <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 dark:text-slate-300 leading-relaxed">
+          Après des expériences de soutien réussites auprès d'élèves en <strong class="text-white dark:text-white font-semibold">France</strong> et en <strong class="text-white dark:text-white font-semibold">Espagne</strong>, <span class="text-brand-400 font-bold">Romarbac</span> réouvre ses portes pour une deuxième année dédiée aux bacheliers marocains ! Ne ratez pas cette occasion unique pour booster vos résultats et intégrer les meilleures écoles.
+        </p>
+      </div>
+
+      <!-- STATISTIQUES & IMPACT -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pt-2">
+        <div class="bg-slate-800/60 dark:bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center backdrop-blur-md">
+          <span class="block text-3xl sm:text-4xl font-black text-amber-400">+311</span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-300">Mentions Très Bien</span>
+        </div>
+        <div class="bg-slate-800/60 dark:bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center backdrop-blur-md">
+          <span class="block text-3xl sm:text-4xl font-black text-emerald-400">+416</span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-300">Bac Obtenus</span>
+        </div>
+        <div class="bg-slate-800/60 dark:bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center backdrop-blur-md">
+          <span class="block text-3xl sm:text-4xl font-black text-brand-400">2 Pays</span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-300">France & Espagne</span>
+        </div>
+        <div class="bg-slate-800/60 dark:bg-slate-800/60 border border-slate-700/80 rounded-2xl p-4 sm:p-5 text-center backdrop-blur-md">
+          <span class="block text-3xl sm:text-4xl font-black text-indigo-400">An 2</span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-300">Édition Maroc</span>
+        </div>
+      </div>
+
+      <!-- CADRE D'ENGAGEMENT -->
+      <div class="bg-gradient-to-br from-slate-800/90 via-slate-800/50 to-brand-950/40 p-6 sm:p-8 rounded-3xl border border-slate-700/80 text-left max-w-4xl mx-auto shadow-2xl backdrop-blur-md space-y-4">
+        <div class="flex items-center gap-3 border-b border-slate-700/60 pb-4">
+          <i class="fa-solid fa-compass-drafting text-2xl text-amber-400"></i>
+          <div>
+            <h3 class="text-lg font-bold text-white dark:text-white">Un encadrement complet pour votre avenir</h3>
+            <p class="text-xs text-slate-400">Accompagnement pédagogique et conseils stratégiques post-bac</p>
+          </div>
+        </div>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-300">
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <span>Résumés de cours, fiches de révision et exercices ciblés.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <span>Soutien personnalisé et préparation intensive aux épreuves.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <span>Conseils et accompagnement dans le choix des filières post-bac.</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-emerald-400 mt-1"></i>
+            <span>Orientation ciblée vers les Grandes Écoles et facultés.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- BOUTONS D'ACTION -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 pb-16">
+        <button onclick="openModal('pricingModal')" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-extrabold rounded-2xl shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3 text-base">
+          <i class="fa-solid fa-rocket text-amber-300"></i>
+          <span>S'abonner à nos offres</span>
+        </button>
+        <button onclick="openModal('quickLoginModal')" class="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded-2xl border border-slate-700 transition flex items-center justify-center gap-3 text-base">
+          <i class="fa-solid fa-right-to-bracket text-brand-400"></i>
+          <span>Déjà inscrit ? Connexion</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-6xl mx-auto w-full text-center py-6 border-t border-slate-800 text-xs text-slate-500 relative z-10 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p>© 2026 Romarbac — Plateforme d'apprentissage et de soutien au Baccalauréat.</p>
+      <a href="mailto:romarbacmaroc@gmail.com" class="text-brand-400 hover:underline flex items-center gap-2 font-medium">
+        <i class="fa-solid fa-envelope text-sm"></i>
+        <span>romarbacmaroc@gmail.com</span>
+      </a>
+    </footer>
+  </div>
+
+
+  <!-- MODALE : OFFRES D'ABONNEMENT -->
+  <div id="pricingModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md hidden items-center justify-center z-50 p-4 overflow-y-auto">
+    <div class="bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-3xl max-w-4xl w-full p-6 sm:p-8 space-y-6 relative shadow-2xl my-8">
+      <button onclick="closeModal('pricingModal')" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-700/60 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <div class="text-center space-y-2">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Abonnements Romarbac</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white dark:text-white">Choisissez la formule adaptée à vos objectifs</h2>
+        <p class="text-xs sm:text-sm text-slate-400 max-w-xl mx-auto">Rejoignez la promotion Romarbac et profitez d'un soutien pédagogique complet et d'une orientation stratégique.</p>
+      </div>
+
+      <div class="bg-gradient-to-r from-emerald-900/40 via-teal-950/60 to-slate-900 border border-emerald-500/40 rounded-2xl p-4 sm:p-5 flex items-start gap-4 text-left shadow-lg">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-500/30">
+          <i class="fa-solid fa-circle-exclamation text-lg"></i>
+        </div>
+        <div class="space-y-1">
+          <h4 class="text-sm font-bold text-emerald-300">Instructions importantes pour votre inscription</h4>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Dès que vous validez votre paiement, veuillez <strong class="text-white underline">prendre une capture d'écran</strong> et nous l'envoyer par e-mail à <strong class="text-brand-300 font-mono">romarbacmaroc@gmail.com</strong>. L'opération de traitement ne prend jamais plus de <strong class="text-white">24 heures</strong> pour recevoir vos accès !
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+        <div class="bg-slate-900/80 border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between space-y-6 hover:border-slate-600 transition">
+          <div class="space-y-4">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700 inline-block">Abonnement Mensuel</span>
+            <div>
+              <span class="text-4xl font-black text-white dark:text-white">75</span>
+              <span class="text-lg font-bold text-brand-400"> DH</span>
+              <span class="text-xs text-slate-400"> / mois</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">Idéal pour tester la plateforme et suivre les révisions mois par mois.</p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Accès complet aux cours & exercices</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Traceur de courbe interactif</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Support par message</li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/test_4gM00i9dBcUy8XkfaEeAg01" target="_blank" class="w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl transition border border-slate-700 text-center block">
+            Sélectionner cette offre
+          </a>
+        </div>
+
+        <div class="bg-slate-900 border-2 border-brand-500 rounded-2xl p-6 flex flex-col justify-between space-y-6 relative shadow-xl shadow-brand-600/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-600 text-white text-[10px] font-black uppercase px-3 py-0.5 rounded-full tracking-wider shadow">
+            Recommandé
+          </div>
+          <div class="space-y-4">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-brand-500/20 text-brand-300 border border-brand-500/30 inline-block">Abonnement Semestriel</span>
+            <div>
+              <span class="text-4xl font-black text-white dark:text-white">300</span>
+              <span class="text-lg font-bold text-brand-400"> DH</span>
+              <span class="text-xs text-slate-400"> / semestre</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">Un suivi régulier sur tout un semestre pour garantir votre progression.</p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Tout le contenu du pack mensuel</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Suivi personnalisé des devoirs</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Conseils d'orientation initiale</li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/test_4gM00i9dBcUy8XkfaEeAg01" target="_blank" class="w-full py-3 bg-brand-600 hover:bg-brand-500 text-white font-bold text-xs rounded-xl transition text-center block shadow-lg shadow-brand-600/30">
+            S'abonner (300 DH)
+          </a>
+        </div>
+
+        <div class="bg-slate-900/80 border border-amber-500/50 rounded-2xl p-6 flex flex-col justify-between space-y-6 hover:border-amber-500 transition">
+          <div class="space-y-4">
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 inline-block">Pass Réussite Annuel</span>
+            <div>
+              <span class="text-4xl font-black text-white dark:text-white">500</span>
+              <span class="text-lg font-bold text-amber-400"> DH</span>
+              <span class="text-xs text-slate-400"> / an complet</span>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed">L'accompagnement complet jusqu'au Bac et le choix des écoles supérieures.</p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Accès illimité toute l'année</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Préparation aux concours post-bac</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-amber-400"></i> <strong>Accompagnement orientation complet</strong></li>
+            </ul>
+          </div>
+          <a href="https://buy.stripe.com/test_4gM00i9dBcUy8XkfaEeAg01" target="_blank" class="w-full py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs rounded-xl transition text-center block shadow-lg shadow-amber-500/20">
+            Obtenir le Pass Annuel
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MODALE : CONNEXION ÉLÈVE -->
+  <div id="quickLoginModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md hidden items-center justify-center z-50 p-4">
+    <div class="bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-3xl max-w-md w-full p-8 space-y-6 relative shadow-2xl">
+      <button onclick="closeModal('quickLoginModal')" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-700/60 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center space-y-2">
+        <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-brand-600/20 text-brand-500 mb-2">
+          <i class="fa-solid fa-graduation-cap text-2xl"></i>
+        </div>
+        <h2 class="text-2xl font-black text-white dark:text-white">Espace Membre</h2>
+        <p class="text-xs text-slate-400">Connectez-vous pour accéder à vos cours et outils.</p>
+      </div>
+
+      <div id="loginAlert" class="hidden p-4 rounded-xl text-xs font-medium"></div>
+
+      <form id="loginForm" class="space-y-4" onsubmit="handleLogin(event)">
+        <div>
+          <label for="username" class="block text-xs font-medium text-slate-300 mb-1">Identifiant</label>
+          <input id="username" type="text" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Identifiant">
+        </div>
+
+        <div>
+          <label for="password" class="block text-xs font-medium text-slate-300 mb-1">Mot de passe</label>
+          <input id="password" type="password" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm" placeholder="••••••••">
+        </div>
+
+        <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-700/50 space-y-1 text-xs text-slate-400">
+          <div class="flex items-center space-x-2 text-brand-400 font-semibold">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span>ID de cet appareil :</span>
+          </div>
+          <p id="localDeviceIdDisplay" class="font-mono text-slate-200 select-all bg-slate-800 p-1.5 rounded border border-slate-700 text-center text-xs">...</p>
+        </div>
+
+        <button type="submit" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl transition text-sm shadow-lg shadow-brand-600/30">
+          Se connecter
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- TABLEAU DE BORD -->
+  <div id="dashboardView" class="hidden min-h-screen flex flex-col">
+    <header class="bg-slate-800 dark:bg-slate-800 border-b border-slate-700 sticky top-0 z-10 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-graduation-cap text-2xl text-brand-500"></i>
+            <span class="text-xl font-bold text-white dark:text-white">Romarbac</span>
+          </div>
+          <div class="flex items-center space-x-3 sm:space-x-4">
+            <button onclick="toggleTheme()" class="p-2 text-slate-300 hover:text-white rounded-xl bg-slate-700/50 hover:bg-slate-700 transition" title="Changer le thème">
+              <i id="themeIconDash" class="fa-solid fa-moon text-amber-400 text-lg"></i>
+            </button>
+            <div class="text-right">
+              <p id="displayUsername" class="text-sm font-semibold text-white dark:text-white"></p>
+              <p id="displayRole" class="text-xs text-slate-400"></p>
+            </div>
+            <button onclick="handleLogout()" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-700 transition" title="Déconnexion">
+              <i class="fa-solid fa-right-from-bracket text-lg"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      
+      <!-- COMPTE À REBOURS -->
+      <div class="bg-gradient-to-r from-brand-700 via-brand-600 to-indigo-800 rounded-2xl p-6 text-white shadow-xl border border-brand-500/30 space-y-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1 text-center md:text-left">
+            <span class="bg-brand-500/30 text-brand-200 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-brand-400/20">Objectif Bac</span>
+            <h2 class="text-2xl font-black">Temps restant avant les épreuves</h2>
+            <p class="text-xs text-brand-200">Chaque minute compte, reste concentré !</p>
+          </div>
+          <div class="grid grid-cols-4 gap-3 text-center w-full md:w-auto">
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-3 min-w-[70px]">
+              <span id="countDays" class="block text-2xl md:text-3xl font-black text-amber-400">00</span>
+              <span class="text-[10px] uppercase font-semibold text-slate-300">Jours</span>
+            </div>
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-3 min-w-[70px]">
+              <span id="countHours" class="block text-2xl md:text-3xl font-black text-white">00</span>
+              <span class="text-[10px] uppercase font-semibold text-slate-300">Heures</span>
+            </div>
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-3 min-w-[70px]">
+              <span id="countMinutes" class="block text-2xl md:text-3xl font-black text-white">00</span>
+              <span class="text-[10px] uppercase font-semibold text-slate-300">Min</span>
+            </div>
+            <div class="bg-slate-900/60 border border-white/10 rounded-xl p-3 min-w-[70px]">
+              <span id="countSeconds" class="block text-2xl md:text-3xl font-black text-emerald-400">00</span>
+              <span class="text-[10px] uppercase font-semibold text-slate-300">Sec</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4 border-t border-white/10 text-center">
+          <p class="text-sm md:text-base font-semibold tracking-wide text-amber-300 italic flex items-center justify-center gap-2">
+            <i class="fa-solid fa-quote-left text-xs text-amber-400/60"></i>
+            <span>Walk today so you don't have to run tomorrow</span>
+            <i class="fa-solid fa-quote-right text-xs text-amber-400/60"></i>
+          </p>
+        </div>
+      </div>
+
+      <!-- BOUTONS D'ACCÈS AUX OUTILS (AVEC CAUSERIE IA) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+        <!-- Assistant IA Causerie -->
+        <button onclick="toggleCauserieAI()" class="p-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-bold rounded-2xl transition shadow-lg shadow-violet-600/30 flex items-center justify-between border border-violet-400/30 group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-amber-300 text-lg group-hover:scale-110 transition">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="text-left">
+              <span class="block text-sm">Assistant IA Causerie</span>
+              <span class="text-[10px] text-violet-200 font-normal">Chatbot Pédagogique</span>
+            </div>
+          </div>
+          <i id="causerieToggleIcon" class="fa-solid fa-chevron-down text-sm"></i>
+        </button>
+
+        <!-- 1. Traceur -->
+        <button onclick="toggleGrapher()" class="p-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-2xl transition shadow-lg shadow-indigo-600/30 flex items-center justify-between border border-indigo-400/30 group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/30 flex items-center justify-center text-amber-400 text-lg group-hover:scale-110 transition">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="text-left">
+              <span class="block text-sm">Traceur de Courbe</span>
+              <span class="text-[10px] text-indigo-200 font-normal">LN &amp; EXP</span>
+            </div>
+          </div>
+          <i id="grapherToggleIcon" class="fa-solid fa-chevron-down text-sm"></i>
+        </button>
+
+        <!-- 2. Résolveur -->
+        <button onclick="toggleSolver()" class="p-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl transition shadow-lg shadow-emerald-600/30 flex items-center justify-between border border-emerald-400/30 group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/30 flex items-center justify-center text-amber-300 text-lg group-hover:scale-110 transition">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <div class="text-left">
+              <span class="block text-sm">Résolveur d'Équations</span>
+              <span class="text-[10px] text-emerald-200 font-normal">N, R, C exactes (Deg 3)</span>
+            </div>
+          </div>
+          <i id="solverToggleIcon" class="fa-solid fa-chevron-down text-sm"></i>
+        </button>
+
+        <!-- 3. Labo de Physique -->
+        <button onclick="togglePhysicsLab()" class="p-4 bg-amber-600 hover:bg-amber-700 text-slate-950 font-extrabold rounded-2xl transition shadow-lg shadow-amber-600/30 flex items-center justify-between border border-amber-400/30 group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-950/20 flex items-center justify-center text-white text-lg group-hover:scale-110 transition">
+              <i class="fa-solid fa-flask"></i>
+            </div>
+            <div class="text-left">
+              <span class="block text-sm">Labo de Physique</span>
+              <span class="text-[10px] text-slate-900 font-semibold">Circuits, Ondes...</span>
+            </div>
+          </div>
+          <i id="physicsToggleIcon" class="fa-solid fa-chevron-down text-sm"></i>
+        </button>
+
+        <!-- 4. Guide d'Orientation -->
+        <button onclick="toggleOrientationGuide()" class="p-4 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-2xl transition shadow-lg shadow-purple-600/30 flex items-center justify-between border border-purple-400/30 group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/30 flex items-center justify-center text-amber-300 text-lg group-hover:scale-110 transition">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <div class="text-left">
+              <span class="block text-sm">Guide d'Orientation</span>
+              <span class="text-[10px] text-purple-200 font-normal">Test 35 questions expert</span>
+            </div>
+          </div>
+          <i id="orientationToggleIcon" class="fa-solid fa-chevron-down text-sm"></i>
+        </button>
+
+        <!-- 5. Cahier de Suivi -->
+        <button onclick="toggleNotebook()" class="p-4 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-2xl transition shadow-lg shadow-teal-600/30 flex items-center justify-between border border-teal-400/30 group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/30 flex items-center justify-center text-amber-300 text-lg group-hover:scale-110 transition">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <div class="text-left">
+              <span class="block text-sm">Cahier de Suivi</span>
+              <span class="text-[10px] text-teal-200 font-normal">Auto-évaluation leçons</span>
+            </div>
+          </div>
+          <i id="notebookToggleIcon" class="fa-solid fa-chevron-down text-sm"></i>
+        </button>
+      </div>
+
+      <!-- PANNEAU ASSISTANT IA CAUSERIE -->
+      <div id="causeriePanel" class="hidden bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-2xl p-6 space-y-4 shadow-xl">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-700 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-white dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-robot text-violet-400"></i> Assistant IA Causerie (Intégré à Romarbac)
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">Posez vos questions sur vos cours, exercices ou méthodes de révision directement à votre assistant intelligent.</p>
+          </div>
+        </div>
+        <!-- Intégration du widget Causerie mis à jour -->
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-700 overflow-hidden">
+          <div id="causerie-section"></div>
+          <script src="https://dashboard.causeriebot.com/widget.js"
+            data-id="ba80ff74-1655-4c5c-8be6-52b08a8126d1"
+            data-url="https://dashboard.causeriebot.com"
+            data-target="#causerie-section"
+            data-height="560px"></script>
+        </div>
+      </div>
+
+      <!-- TRACEUR DE COURBE -->
+      <div id="grapherPanel" class="hidden bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-2xl p-6 space-y-4 shadow-xl">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-700 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-white dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-chart-line text-indigo-400"></i> Traceur de Courbe (Support LN & EXP)
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">Saisissez vos fonctions mathématiques. Exemples : ln(x), exp(x), sin(x), x^2</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
+          <div class="md:col-span-6 flex items-center gap-2">
+            <span class="text-sm font-bold text-slate-300 font-mono">f(x) =</span>
+            <input type="text" id="funcInput" value="ln(x)" placeholder="ex: ln(x), exp(x), sin(x)" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-4 py-2 text-sm font-mono focus:outline-none focus:border-indigo-500">
+          </div>
+          <div class="md:col-span-3 flex items-center gap-2">
+            <label class="text-xs text-slate-400">Couleur:</label>
+            <input type="color" id="lineColor" value="#38bdf8" class="h-9 w-12 rounded bg-slate-900 border border-slate-700 cursor-pointer p-0.5">
+            <label class="text-xs text-slate-400 ml-2">Zoom:</label>
+            <input type="number" id="scaleInput" value="40" min="10" max="200" step="5" class="w-16 bg-slate-900 border border-slate-700 text-white rounded-xl px-2 py-1 text-sm text-center">
+          </div>
+          <div class="md:col-span-3 flex gap-2">
+            <button onclick="drawGraph()" class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-3 rounded-xl text-sm transition flex items-center justify-center gap-1 shadow">
+              <i class="fa-solid fa-play text-xs"></i> Tracer
+            </button>
+            <button onclick="resetGraph()" class="bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold py-2 px-3 rounded-xl text-sm transition" title="Réinitialiser">
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 pt-1 text-xs">
+          <span class="text-slate-400 self-center">Raccourcis :</span>
+          <button onclick="setQuickFunc('ln(x)')" class="px-2.5 py-1 bg-slate-900 hover:bg-slate-700 border border-slate-700 rounded text-brand-400 font-mono">ln(x)</button>
+          <button onclick="setQuickFunc('exp(x)')" class="px-2.5 py-1 bg-slate-900 hover:bg-slate-700 border border-slate-700 rounded text-brand-400 font-mono">exp(x)</button>
+          <button onclick="setQuickFunc('ln(x) + exp(x)')" class="px-2.5 py-1 bg-slate-900 hover:bg-slate-700 border border-slate-700 rounded text-brand-400 font-mono">ln(x) + exp(x)</button>
+          <button onclick="setQuickFunc('sin(x)')" class="px-2.5 py-1 bg-slate-900 hover:bg-slate-700 border border-slate-700 rounded text-brand-400 font-mono">sin(x)</button>
+        </div>
+        <div id="graphError" class="hidden text-xs text-rose-400 bg-rose-500/10 p-2.5 rounded-xl border border-rose-500/20"></div>
+        <div class="relative w-full bg-slate-950 rounded-xl border border-slate-700 overflow-hidden flex items-center justify-center">
+          <canvas id="functionCanvas" width="800" height="400" class="w-full h-auto max-h-[450px]"></canvas>
+        </div>
+      </div>
+
+      <!-- RÉSOLVEUR D'ÉQUATIONS (DEGRÉ 3 MAX - PRÉCISION 100%) -->
+      <div id="solverPanel" class="hidden bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-2xl p-6 space-y-6 shadow-xl">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-700 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-white dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-calculator text-emerald-400"></i> Résolveur d'Équations (Degré 3 Max - N, R, C)
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">Saisissez vos coefficients (réels ou complexes). Précision absolue 100% garantie.</p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div id="equationDisplay" class="text-center font-mono text-base sm:text-lg text-emerald-300 bg-slate-950 p-4 rounded-xl border border-slate-700 shadow-inner">
+            a · x³ + b · x² + c · x + d = 0
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="coeffInputs">
+            <div>
+              <label class="block text-xs font-bold text-slate-400 mb-1">Coeff. a (x³)</label>
+              <input type="text" id="coeffA" value="0" class="w-full bg-slate-900 border border-slate-700 text-white font-mono rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-emerald-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-400 mb-1">Coeff. b (x²)</label>
+              <input type="text" id="coeffB" value="0" class="w-full bg-slate-900 border border-slate-700 text-white font-mono rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-emerald-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-400 mb-1">Coeff. c (x)</label>
+              <input type="text" id="coeffC" value="0" class="w-full bg-slate-900 border border-slate-700 text-white font-mono rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-emerald-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-400 mb-1">Coeff. d (cst)</label>
+              <input type="text" id="coeffD" value="0" class="w-full bg-slate-900 border border-slate-700 text-white font-mono rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-emerald-500">
+            </div>
+          </div>
+          <!-- Remarque ajoutée sans mention de citation -->
+          <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-xl text-xs text-amber-300 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-sm shrink-0"></i>
+            <span><strong>Remarque :</strong> Veuillez ne pas saisir de coefficients trop grands pour éviter les erreurs de dépassement ou de perte de précision numérique.</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+          <button onclick="solveEquation('N')" class="py-3 px-4 bg-slate-900 hover:bg-slate-700 text-amber-300 font-extrabold rounded-xl border border-amber-500/30 transition flex items-center justify-center gap-2 shadow">
+            <i class="fa-solid fa-list-ol"></i><span>Résoudre dans N</span>
+          </button>
+          <button onclick="solveEquation('R')" class="py-3 px-4 bg-slate-900 hover:bg-slate-700 text-emerald-400 font-extrabold rounded-xl border border-emerald-500/30 transition flex items-center justify-center gap-2 shadow">
+            <i class="fa-solid fa-square-root-variable"></i><span>Résoudre dans R</span>
+          </button>
+          <button onclick="solveEquation('C')" class="py-3 px-4 bg-slate-900 hover:bg-slate-700 text-brand-300 font-extrabold rounded-xl border border-brand-500/30 transition flex items-center justify-center gap-2 shadow">
+            <i class="fa-solid fa-atom"></i><span>Résoudre dans C</span>
+          </button>
+        </div>
+        <div id="solverResults" class="hidden bg-slate-950/80 border border-slate-700/80 rounded-xl p-5 space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span id="targetSetLabel" class="text-xs font-bold uppercase tracking-wider text-amber-400"></span>
+            <span id="solutionCountLabel" class="text-xs text-slate-400"></span>
+          </div>
+          <div id="solutionList" class="space-y-2 font-mono text-sm text-slate-200"></div>
+        </div>
+      </div>
+
+      <!-- LABO DE PHYSIQUE -->
+      <div id="physicsLabPanel" class="hidden bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-slate-700/80 pb-5">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-600 flex items-center justify-center text-slate-950 text-2xl shadow-lg shadow-amber-500/30">
+              <i class="fa-solid fa-flask-vial"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-white dark:text-white">Laboratoire Virtuel de Physique</h2>
+              <p class="text-xs text-slate-400">Simulations interactives et calculs de précision pour le Baccalauréat</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2 w-full md:w-auto bg-slate-900 p-1.5 rounded-2xl border border-slate-700">
+            <button onclick="switchPhysicsTab('electric')" id="physBtnElectric" class="px-4 py-2.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2 bg-amber-500 text-slate-950 shadow-md">
+              <i class="fa-solid fa-bolt"></i><span>Électricité</span>
+            </button>
+            <button onclick="switchPhysicsTab('waves')" id="physBtnWaves" class="px-4 py-2.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2 bg-slate-900 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-wave-square"></i><span>Ondes</span>
+            </button>
+            <button onclick="switchPhysicsTab('radioactive')" id="physBtnRadioactive" class="px-4 py-2.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2 bg-slate-900 text-slate-300 hover:text-white">
+              <i class="fa-solid fa-radiation"></i><span>Radioactivité</span>
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-5 bg-slate-900/90 p-5 sm:p-6 rounded-2xl border border-slate-700/80 space-y-5 shadow-lg">
+            <div class="flex items-center gap-2 border-b border-slate-800 pb-3">
+              <i class="fa-solid fa-sliders text-amber-400"></i>
+              <h3 id="physSimTitle" class="text-sm font-bold text-white uppercase tracking-wider">Paramètres et Matériel</h3>
+            </div>
+            <div id="physControls" class="space-y-4 text-xs"></div>
+            <div class="pt-4 border-t border-slate-800 space-y-2">
+              <label class="block font-bold text-amber-400 flex items-center gap-2">
+                <i class="fa-solid fa-clock"></i><span>Analyser à l'instant t :</span>
+              </label>
+              <div class="flex gap-2">
+                <input type="number" id="instantT" value="5730" step="10" min="0" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-3.5 py-2.5 text-xs font-mono focus:outline-none focus:border-amber-500" oninput="runAdvancedPhysicsSimulation()">
+                <button onclick="runAdvancedPhysicsSimulation()" class="px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl transition text-xs shadow-md">Calculer</button>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-7 bg-slate-950 rounded-2xl border border-slate-700/80 p-5 flex flex-col items-center justify-center relative shadow-inner space-y-4">
+            <div class="w-full flex items-center justify-between text-xs text-slate-400 px-1 border-b border-slate-800/80 pb-2">
+              <span class="flex items-center gap-1.5 font-semibold text-slate-300">
+                <i class="fa-solid fa-desktop text-amber-400"></i> Visualisation Oscilloscope / Courbe
+              </span>
+              <span class="font-mono text-[10px] bg-slate-900 px-2 py-0.5 rounded border border-slate-800 text-amber-300">Mode Temps Réel</span>
+            </div>
+            <canvas id="physicsCanvas" width="600" height="260" class="w-full h-auto max-h-[260px] rounded-xl bg-slate-900/50 border border-slate-800"></canvas>
+            <div id="physExtraInfo" class="w-full bg-slate-900/90 border border-slate-800 rounded-2xl p-4 text-xs text-slate-200 space-y-2 shadow-lg"></div>
+            <p id="physDescription" class="text-[11px] text-slate-400 text-center italic px-2">Visualisation haute fidélité des signaux et de la décroissance radioactive.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GUIDE D'ORIENTATION EXPERT -->
+      <div id="orientationPanel" class="hidden bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-700 pb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-purple-600 flex items-center justify-center text-white text-2xl shadow-lg">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-white dark:text-white">Guide d'Orientation Post-Bac Expert</h2>
+              <p class="text-xs text-slate-400">Répondez aux 35 questions pour déterminer précisément votre filière (Sciences, Éco, Lettres, Tech).</p>
+            </div>
+          </div>
+          <button onclick="resetOrientationQuiz()" class="px-4 py-2 bg-slate-900 hover:bg-slate-700 text-slate-300 text-xs font-bold rounded-xl border border-slate-700 transition">
+            <i class="fa-solid fa-rotate-right mr-1"></i> Recommencer
+          </button>
+        </div>
+        <div id="orientationQuizContainer" class="space-y-6"></div>
+        <div id="orientationResultBox" class="hidden bg-slate-900 border border-purple-500/50 rounded-2xl p-6 space-y-4">
+          <h3 class="text-lg font-bold text-purple-400 flex items-center gap-2">
+            <i class="fa-solid fa-star text-amber-400"></i> Résultat détaillé de votre analyse d'orientation
+          </h3>
+          <div id="orientationResultContent" class="text-sm text-slate-200 space-y-3"></div>
+        </div>
+      </div>
+
+      <!-- CAHIER DE NOTES & SUIVI PERSONNEL -->
+      <div id="notebookPanel" class="hidden bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-700 pb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-teal-600 flex items-center justify-center text-white text-2xl shadow-lg">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-white dark:text-white">Cahier de Suivi &amp; Auto-Évaluation</h2>
+              <p class="text-xs text-slate-400">Suivez l'état d'assimilation de chaque leçon de la plateforme avec 3 niveaux d'auto-évaluation.</p>
+            </div>
+          </div>
+          <div class="text-xs font-mono bg-slate-900 px-3 py-1.5 rounded-xl border border-slate-700 text-teal-300">
+            Mise à jour en temps réel
+          </div>
+        </div>
+        <div id="notebookCoursesList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      </div>
+
+      <!-- ESPACE ADMIN -->
+      <div id="adminPanel" class="hidden bg-slate-800 border border-slate-700 rounded-2xl p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-700 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-amber-400 flex items-center gap-2">
+              <i class="fa-solid fa-users-gear"></i> Gestion des Élèves &amp; Leçons (Cloud)
+            </h2>
+            <p class="text-xs text-slate-400 mt-1">Gestion des accès, modification des leçons et appareils.</p>
+          </div>
+        </div>
+
+        <form onsubmit="handleAddStudent(event)" class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/60 space-y-3">
+          <h3 class="text-sm font-semibold text-slate-300">Ajouter un nouvel élève</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <input type="text" id="newStudentUser" placeholder="Identifiant (ex: paul2026)" required class="bg-slate-900 border border-slate-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-brand-500">
+            <input type="text" id="newStudentPass" placeholder="Mot de passe" required class="bg-slate-900 border border-slate-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-brand-500">
+            <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold rounded-xl py-2 text-sm transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-user-plus"></i> Créer le compte
+            </button>
+          </div>
+        </form>
+
+        <form onsubmit="handleAddCourse(event)" class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/60 space-y-3">
+          <h3 class="text-sm font-semibold text-brand-400 flex items-center gap-2">
+            <i class="fa-solid fa-plus-circle"></i> Ajouter une nouvelle leçon / chapitre
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Matière / Catégorie</label>
+              <input type="text" id="newCourseCategory" placeholder="ex: Mathématiques" required class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Titre du Chapitre</label>
+              <input type="text" id="newCourseTitle" placeholder="ex: Chapitre 2 - Suites" required class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-brand-500">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Description courte</label>
+            <input type="text" id="newCourseDesc" placeholder="ex: Récurrence et limites." required class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-brand-500">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Lien PDF Cours</label>
+              <input type="text" id="newCourseCoursUrl" placeholder="ressources/MATH/cours.pdf" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Lien PDF Exercice</label>
+              <input type="text" id="newCourseExoUrl" placeholder="ressources/MATH/exo.pdf" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-500">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Lien PDF Défi</label>
+              <input type="text" id="newCourseDefiUrl" placeholder="ressources/MATH/defi.png" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-500">
+            </div>
+          </div>
+          <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold rounded-xl py-2.5 text-sm transition flex items-center justify-center gap-2 shadow">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Publier la leçon en ligne
+          </button>
+        </form>
+
+        <form onsubmit="handleEditCourse(event)" class="bg-slate-900/60 p-4 rounded-xl border border-indigo-500/40 space-y-3">
+          <h3 class="text-sm font-semibold text-indigo-400 flex items-center gap-2">
+            <i class="fa-solid fa-pen-to-square"></i> Modifier ou Supprimer une leçon existante
+          </h3>
+          <div>
+            <label class="block text-xs font-medium text-slate-400 mb-1">Sélectionner la leçon</label>
+            <select id="editCourseSelect" onchange="loadCourseIntoEditForm()" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-indigo-500"></select>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Modifier la Catégorie</label>
+              <input type="text" id="editCourseCategory" required class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Modifier le Titre</label>
+              <input type="text" id="editCourseTitle" required class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Modifier Lien Cours</label>
+              <input type="text" id="editCourseCoursUrl" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Modifier Lien Exercice</label>
+              <input type="text" id="editCourseExoUrl" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-400 mb-1">Modifier Lien Défi</label>
+              <input type="text" id="editCourseDefiUrl" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-indigo-500">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl py-2.5 text-sm transition flex items-center justify-center gap-2 shadow">
+              <i class="fa-solid fa-floppy-disk"></i> Enregistrer les modifications
+            </button>
+            <button type="button" onclick="handleDeleteCourse()" class="w-full bg-rose-600 hover:bg-rose-500 text-white font-bold rounded-xl py-2.5 text-sm transition flex items-center justify-center gap-2 shadow">
+              <i class="fa-solid fa-trash"></i> Supprimer cette leçon
+            </button>
+          </div>
+        </form>
+
+        <div class="space-y-3">
+          <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Comptes enregistrés</h3>
+          <div id="studentsList" class="bg-slate-900/40 border border-slate-700/50 rounded-xl p-4 divide-y divide-slate-700/50">
+            <p class="text-xs text-slate-500 text-center">Chargement des données...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESPACE DES COURS -->
+      <div class="space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-4 bg-slate-800 dark:bg-slate-800 p-6 rounded-2xl border border-slate-700">
+          <div>
+            <h2 class="text-2xl font-bold text-white dark:text-white flex items-center gap-2">
+              <i class="fa-solid fa-book-open text-brand-500"></i> Espace des Cours &amp; Exercices
+            </h2>
+            <p class="text-sm text-slate-400 mt-1">Sélectionne une matière ou consulte l'ensemble des modules.</p>
+          </div>
+          <div id="categoryFilters" class="flex flex-wrap gap-2"></div>
+        </div>
+        <div id="coursesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    // ==========================================
+    // GESTION DU MODE SOMBRE / CLAIR
+    // ==========================================
+    let isDarkMode = true;
+
+    function toggleTheme() {
+      isDarkMode = !isDarkMode;
+      const htmlEl = document.getElementById('htmlRoot');
+      const bodyEl = document.getElementById('bodyRoot');
+      const iconLanding = document.getElementById('themeIconLanding');
+      const iconDash = document.getElementById('themeIconDash');
+
+      if (isDarkMode) {
+        htmlEl.classList.remove('bg-slate-100', 'text-slate-900');
+        htmlEl.classList.add('bg-slate-900', 'text-slate-100');
+        bodyEl.classList.remove('bg-slate-100', 'text-slate-900');
+        bodyEl.classList.add('bg-slate-900', 'text-slate-100');
+        if (iconLanding) iconLanding.className = "fa-solid fa-moon text-amber-400";
+        if (iconDash) iconDash.className = "fa-solid fa-moon text-amber-400 text-lg";
+        localStorage.setItem('romarbac_theme', 'dark');
+      } else {
+        htmlEl.classList.remove('bg-slate-900', 'text-slate-100');
+        htmlEl.classList.add('bg-slate-100', 'text-slate-900');
+        bodyEl.classList.remove('bg-slate-900', 'text-slate-100');
+        bodyEl.classList.add('bg-slate-100', 'text-slate-900');
+        if (iconLanding) iconLanding.className = "fa-solid fa-sun text-amber-500";
+        if (iconDash) iconDash.className = "fa-solid fa-sun text-amber-500 text-lg";
+        localStorage.setItem('romarbac_theme', 'light');
+      }
+    }
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+      document.getElementById(id).classList.add('flex');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+      document.getElementById(id).classList.remove('flex');
+    }
+
+    // ==========================================
+    // CHRONOMÈTRE BAC
+    // ==========================================
+    const bacDate = new Date("2027-06-01T08:00:00").getTime();
+
+    function updateBacCountdown() {
+      const diff = Math.max(0, bacDate - Date.now());
+      const units = [
+        Math.floor(diff / 864e5),
+        Math.floor((diff / 36e5) % 24),
+        Math.floor((diff / 6e4) % 60),
+        Math.floor((diff / 1000) % 60)
+      ];
+      ["countDays", "countHours", "countMinutes", "countSeconds"].forEach((id, i) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = String(units[i]).padStart(2, '0');
+      });
+    }
+
+    setInterval(updateBacCountdown, 1000);
+    updateBacCountdown();
+
+    // ==========================================
+    // ASSISTANT IA CAUSERIE TOGGLE
+    // ==========================================
+    function toggleCauserieAI() {
+      const panel = document.getElementById('causeriePanel');
+      const icon = document.getElementById('causerieToggleIcon');
+      const isHidden = panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !isHidden);
+      icon.className = isHidden ? 'fa-solid fa-chevron-up text-sm' : 'fa-solid fa-chevron-down text-sm';
+    }
+
+    // ==========================================
+    // TRACEUR DE COURBES MATHÉMATIQUES
+    // ==========================================
+    function toggleGrapher() {
+      const panel = document.getElementById('grapherPanel');
+      const icon = document.getElementById('grapherToggleIcon');
+      const isHidden = panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !isHidden);
+      icon.className = isHidden ? 'fa-solid fa-chevron-up text-sm' : 'fa-solid fa-chevron-down text-sm';
+      if (isHidden) drawGraph();
+    }
+
+    function setQuickFunc(str) {
+      document.getElementById('funcInput').value = str;
+      drawGraph();
+    }
+
+    function parseMathExpression(expr) {
+      let cleaned = expr.toLowerCase().trim();
+      cleaned = cleaned.replace(/\blog\b/g, 'Math.log10').replace(/\bln\b/g, 'Math.log');
+      cleaned = cleaned.replace(/\bexp\b/g, 'Math.exp').replace(/\bsin\b/g, 'Math.sin').replace(/\bcos\b/g, 'Math.cos').replace(/\btan\b/g, 'Math.tan').replace(/\bsqrt\b/g, 'Math.sqrt').replace(/\babs\b/g, 'Math.abs').replace(/\bpi\b/g, 'Math.PI').replace(/\^/g, '**');
+      cleaned = cleaned.replace(/(\d)([a-zMath\(])/g, '$1*$2').replace(/(\))([a-z0-9Math\(])/g, '$1*$2');
+      return new Function('x', `try { let val = ${cleaned}; return (typeof val === 'number' && !isNaN(val) && isFinite(val)) ? val : NaN; } catch(e) { return NaN; }`);
+    }
+
+    function drawGraph() {
+      const canvas = document.getElementById('functionCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const expr = document.getElementById('funcInput').value;
+      const color = document.getElementById('lineColor').value;
+      const scale = parseFloat(document.getElementById('scaleInput').value) || 40;
+      const errorDiv = document.getElementById('graphError');
+
+      errorDiv.classList.add('hidden');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const width = canvas.width, height = canvas.height, originX = width / 2, originY = height / 2;
+
+      ctx.strokeStyle = isDarkMode ? '#1e293b' : '#cbd5e1'; ctx.lineWidth = 1;
+      for (let x = originX % scale; x < width; x += scale) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, height); ctx.stroke(); }
+      for (let y = originY % scale; y < height; y += scale) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(width, y); ctx.stroke(); }
+
+      ctx.strokeStyle = isDarkMode ? '#64748b' : '#94a3b8'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.moveTo(0, originY); ctx.lineTo(width, originY); ctx.moveTo(originX, 0); ctx.lineTo(originX, height); ctx.stroke();
+
+      try {
+        const fn = parseMathExpression(expr);
+        ctx.strokeStyle = color; ctx.lineWidth = 2.5; ctx.beginPath();
+        let isDrawing = false;
+        for (let px = 0; px <= width; px += 0.5) {
+          const x = (px - originX) / scale, y = fn(x);
+          if (isNaN(y) || !isFinite(y)) { isDrawing = false; continue; }
+          const py = originY - (y * scale);
+          if (!isDrawing) { ctx.moveTo(px, py); isDrawing = true; } else { ctx.lineTo(px, py); }
+        }
+        ctx.stroke();
+      } catch (err) {
+        errorDiv.textContent = "Erreur de syntaxe."; errorDiv.classList.remove('hidden');
+      }
+    }
+
+    function resetGraph() {
+      document.getElementById('funcInput').value = 'ln(x)';
+      document.getElementById('scaleInput').value = 40;
+      document.getElementById('lineColor').value = '#38bdf8';
+      drawGraph();
+    }
+
+    // ==========================================
+    // RÉSOLVEUR D'ÉQUATIONS (DEGRÉ 3 MAX - PRÉCISION 100%)
+    // ==========================================
+    function toggleSolver() {
+      const panel = document.getElementById('solverPanel');
+      const icon = document.getElementById('solverToggleIcon');
+      const isHidden = panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !isHidden);
+      icon.className = isHidden ? 'fa-solid fa-chevron-up text-sm' : 'fa-solid fa-chevron-down text-sm';
+    }
+
+    function gcd(a, b) {
+      a = Math.abs(a); b = Math.abs(b);
+      while (b) { let t = b; b = a % b; a = t; }
+      return a;
+    }
+
+    function toFraction(val) {
+      if (Math.abs(val) < 1e-10) return "0";
+      if (Math.abs(val - Math.round(val)) < 1e-7) return Math.round(val).toString();
+      let sign = val < 0 ? -1 : 1;
+      let x = Math.abs(val);
+      let bestNum = Math.round(x), bestDen = 1, minErr = Math.abs(x - bestNum);
+      for (let den = 1; den <= 1000; den++) {
+        let num = Math.round(x * den);
+        let err = Math.abs(x - num / den);
+        if (err < minErr) {
+          minErr = err; bestNum = num; bestDen = den;
+          if (err < 1e-10) break;
+        }
+      }
+      if (minErr < 1e-5) {
+        let g = gcd(bestNum, bestDen);
+        let n = (bestNum / g) * sign;
+        let d = bestDen / g;
+        if (d === 1) return n.toString();
+        return `${n}/${d}`;
+      }
+      return (val).toFixed(4);
+    }
+
+    function parseComplex(str) {
+      if (!str || typeof str !== 'string') return { re: 0, im: 0 };
+      let s = str.replace(/\s+/g, '').toLowerCase();
+      if (s === '' || s === '+') return { re: 0, im: 0 };
+      if (s === 'i' || s === '+i') return { re: 0, im: 1 };
+      if (s === '-i') return { re: 0, im: -1 };
+      if (s.includes('i')) {
+        s = s.replace(/i$/, '');
+        let lastPlus = s.lastIndexOf('+'), lastMinus = s.lastIndexOf('-'), splitIdx = Math.max(lastPlus, lastMinus);
+        if (splitIdx > 0) {
+          return { re: parseFloat(s.substring(0, splitIdx)) || 0, im: parseFloat(s.substring(splitIdx)) || (s.substring(splitIdx) === '-' ? -1 : 1) };
+        } else {
+          return { re: 0, im: parseFloat(s) || (s === '-' ? -1 : 1) };
+        }
+      }
+      return { re: parseFloat(s) || 0, im: 0 };
+    }
+
+    function cAdd(a, b) { return { re: a.re + b.re, im: a.im + b.im }; }
+    function cSub(a, b) { return { re: a.re - b.re, im: a.im - b.im }; }
+    function cMul(a, b) { return { re: a.re * b.re - a.im * b.im, im: a.re * b.im + a.im * b.re }; }
+    function cDiv(a, b) {
+      let d = b.re * b.re + b.im * b.im;
+      if (d === 0) return { re: 0, im: 0 };
+      return { re: (a.re * b.re + a.im * b.im) / d, im: (a.im * b.re - a.re * b.im) / d };
+    }
+    function cPow(a, n) { let res = { re: 1, im: 0 }; for (let i = 0; i < n; i++) res = cMul(res, a); return res; }
+    function cAbs(a) { return Math.sqrt(a.re * a.re + a.im * a.im); }
+    function cSqrt(z) {
+      let r = cAbs(z);
+      if (r < 1e-12) return { re: 0, im: 0 };
+      let re = Math.sqrt((r + z.re) / 2);
+      let im = (z.im >= 0 ? 1 : -1) * Math.sqrt((r - z.re) / 2);
+      return { re, im };
+    }
+    function cCubeRoot(z) {
+      let r = cAbs(z);
+      if (r < 1e-12) return { re: 0, im: 0 };
+      let theta = Math.atan2(z.im, z.re);
+      let r3 = Math.cbrt(r);
+      return { re: r3 * Math.cos(theta / 3), im: r3 * Math.sin(theta / 3) };
+    }
+
+    // Raffinement de Newton-Raphson pour une précision de 100% sur le degré 3
+    function refineRoot(coeffs, z0, maxIter = 15) {
+      let z = { ...z0 };
+      let n = coeffs.length - 1;
+      for (let i = 0; i < maxIter; i++) {
+        let p = { re: 0, im: 0 };
+        for (let j = 0; j <= n; j++) p = cAdd(p, cMul(coeffs[j], cPow(z, n - j)));
+        
+        let dp = { re: 0, im: 0 };
+        for (let j = 0; j < n; j++) {
+          let deg = n - j;
+          let derivativeCoeff = cMul(coeffs[j], { re: deg, im: 0 });
+          dp = cAdd(dp, cMul(derivativeCoeff, cPow(z, deg - 1)));
+        }
+        
+        let step = cDiv(p, dp);
+        z = cSub(z, step);
+        if (cAbs(step) < 1e-14) break;
+      }
+      return z;
+    }
+
+    function solvePolynomialComplex(coeffs) {
+      let cCopy = [...coeffs];
+      while (cCopy.length > 1 && cAbs(cCopy[0]) < 1e-12) cCopy.shift();
+      let n = cCopy.length - 1;
+      
+      if (n <= 0) {
+        if (cCopy.length === 1 && cAbs(cCopy[0]) > 1e-12) return { type: 'NONE' };
+        return { type: 'ALL' };
+      }
+      
+      // Degré 1 : ax + b = 0 -> x = -b/a
+      if (n === 1) {
+        let r = cDiv({ re: -cCopy[1].re, im: -cCopy[1].im }, cCopy[0]);
+        return { type: 'SOL', roots: [r] };
+      }
+      
+      // Degré 2 : ax² + bx + c = 0 (Analytique exact avec discriminant)
+      if (n === 2) {
+        let a = cCopy[0], b = cCopy[1], c = cCopy[2];
+        let b2 = cMul(b, b);
+        let fourac = cMul({ re: 4, im: 0 }, cMul(a, c));
+        let delta = cSub(b2, fourac);
+        let sqrtDelta = cSqrt(delta);
+        let twoA = cMul({ re: 2, im: 0 }, a);
+        
+        let r1 = cDiv(cSub({ re: -b.re, im: -b.im }, sqrtDelta), twoA);
+        let r2 = cDiv(cAdd({ re: -b.re, im: -b.im }, sqrtDelta), twoA);
+        return { type: 'SOL', roots: [r1, r2] };
+      }
+      
+      // Degré 3 : ax³ + bx² + cx + d = 0 (Cardan + Raffinement Newton)
+      if (n === 3) {
+        let a = cCopy[0], b = cCopy[1], c = cCopy[2], d = cCopy[3];
+        // Normalisation x³ + A x² + B x + C = 0
+        let A = cDiv(b, a), B = cDiv(c, a), C = cDiv(d, a);
+        
+        // Substitution x = y - A/3 pour éliminer le terme en x²
+        let A_3 = cDiv(A, { re: 3, im: 0 });
+        let p = cSub(B, cMul({ re: 3, im: 0 }, cMul(A_3, A_3)));
+        let q = cAdd(cSub(cMul({ re: 2, im: 0 }, cMul(A_3, cMul(A_3, A_3))), cMul(B, A_3)), C);
+        
+        // Formules de Cardan y³ + p y + q = 0
+        let q_2 = cDiv(q, { re: 2, im: 0 });
+        let q2_4 = cMul(q_2, q_2);
+        let p3_27 = cDiv(cMul(cMul(p, p), p), { re: 27, im: 0 });
+        let delta = cSub(q2_4, p3_27);
+        let sqrtDelta = cSqrt(delta);
+        
+        let u = cCubeRoot(cSub(sqrtDelta, q_2));
+        let v = cCubeRoot(cSub({ re: -q_2.re, im: -q_2.im }, sqrtDelta));
+        
+        let y1 = cAdd(u, v);
+        let zeta1 = { re: -0.5, im: Math.sqrt(3)/2 };
+        let zeta2 = { re: -0.5, im: -Math.sqrt(3)/2 };
+        let y2 = cAdd(cMul(u, zeta1), cMul(v, zeta2));
+        let y3 = cAdd(cMul(u, zeta2), cMul(v, zeta1));
+        
+        let roots = [cSub(y1, A_3), cSub(y2, A_3), cSub(y3, A_3)];
+        
+        // Application du raffinement de Newton pour une précision absolue de 100%
+        let refinedRoots = roots.map(r => refineRoot(cCopy, r));
+        
+        return { type: 'SOL', roots: refinedRoots };
+      }
+
+      return { type: 'NONE' };
+    }
+
+    function solveEquation(targetSet) {
+      const resultsDiv = document.getElementById('solverResults'), targetLabel = document.getElementById('targetSetLabel'), countLabel = document.getElementById('solutionCountLabel'), listDiv = document.getElementById('solutionList');
+      const a = parseComplex(document.getElementById('coeffA').value), b = parseComplex(document.getElementById('coeffB').value), c = parseComplex(document.getElementById('coeffC').value), d = parseComplex(document.getElementById('coeffD').value);
+
+      let res = solvePolynomialComplex([a, b, c, d]);
+      targetLabel.textContent = `Résolution dans l'ensemble ${targetSet}`;
+
+      if (res.type === 'ALL') { countLabel.textContent = "Infinité"; listDiv.innerHTML = `<p class="text-emerald-400 font-bold">S = R (0 = 0)</p>`; resultsDiv.classList.remove('hidden'); return; }
+      if (res.type === 'NONE') { countLabel.textContent = "0 solution"; listDiv.innerHTML = `<p class="text-amber-400 italic">S = ∅</p>`; resultsDiv.classList.remove('hidden'); return; }
+
+      let filtered = [];
+      const eps = 1e-7;
+      if (targetSet === 'C') filtered = res.roots;
+      else if (targetSet === 'R') filtered = res.roots.filter(r => Math.abs(r.im) < eps);
+      else if (targetSet === 'N') filtered = res.roots.filter(r => Math.abs(r.im) < eps && r.re >= -eps && Math.abs(r.re - Math.round(r.re)) < eps);
+
+      let uniqueRoots = [];
+      filtered.forEach(r => {
+        if (!uniqueRoots.some(u => Math.abs(u.re - r.re) < 1e-5 && Math.abs(u.im - r.im) < 1e-5)) {
+          uniqueRoots.push(r);
+        }
+      });
+
+      countLabel.textContent = `${uniqueRoots.length} solution(s)`;
+      if (uniqueRoots.length === 0) listDiv.innerHTML = `<p class="text-amber-400 italic">S = ∅</p>`;
+      else listDiv.innerHTML = `<div class="text-emerald-400 font-bold mb-2">S = { ${uniqueRoots.map(r => formatComplex(r, targetSet)).join(' ; ')} }</div>`;
+      resultsDiv.classList.remove('hidden');
+    }
+
+    function formatComplex(c, set) {
+      if (set === 'N') return `${Math.round(c.re)}`;
+      let reStr = toFraction(c.re);
+      let imAbs = Math.abs(c.im);
+      let imStr = toFraction(imAbs);
+      
+      if (imAbs < 1e-6) return reStr;
+      if (Math.abs(c.re) < 1e-6) return c.im < 0 ? (imStr === '1' ? '-i' : `-${imStr}i`) : (imStr === '1' ? 'i' : `${imStr}i`);
+      
+      let sign = c.im > 0 ? '+' : '-';
+      let iPart = imStr === '1' ? 'i' : `${imStr}i`;
+      return `${reStr} ${sign} ${iPart}`;
+    }
+
+    // ==========================================
+    // LABO DE PHYSIQUE
+    // ==========================================
+    let currentPhysTab = 'electric';
+
+    function togglePhysicsLab() {
+      const panel = document.getElementById('physicsLabPanel');
+      const icon = document.getElementById('physicsToggleIcon');
+      const isHidden = panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !isHidden);
+      icon.className = isHidden ? 'fa-solid fa-chevron-up text-sm' : 'fa-solid fa-chevron-down text-sm';
+      if (isHidden) switchPhysicsTab('electric');
+    }
+
+    function switchPhysicsTab(tab) {
+      currentPhysTab = tab;
+      const tabsMap = { electric: 'physBtnElectric', waves: 'physBtnWaves', radioactive: 'physBtnRadioactive' };
+      Object.keys(tabsMap).forEach(t => {
+        const btn = document.getElementById(tabsMap[t]);
+        if (t === tab) {
+          btn.className = "px-4 py-2.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2 bg-amber-500 text-slate-950 shadow-md";
+        } else {
+          btn.className = "px-4 py-2.5 text-xs font-bold rounded-xl transition flex items-center justify-center gap-2 bg-slate-900 text-slate-300 hover:text-white";
+        }
+      });
+
+      const title = document.getElementById('physSimTitle');
+      const controls = document.getElementById('physControls');
+      const desc = document.getElementById('physDescription');
+      const info = document.getElementById('physExtraInfo');
+      info.innerHTML = '';
+      const inputT = document.getElementById('instantT');
+
+      if (tab === 'electric') {
+        title.innerHTML = `<i class="fa-solid fa-bolt text-amber-400 mr-2"></i> Montage & Valeurs Numériques Précises`;
+        inputT.value = "0.5";
+        controls.innerHTML = `
+          <div class="space-y-2 bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+            <span class="text-xs font-bold text-amber-400 block mb-2 flex items-center gap-2"><i class="fa-solid fa-microchip"></i> Composants du Circuit :</span>
+            <label class="flex items-center gap-2.5 cursor-pointer"><i class="fa-solid fa-bolt text-amber-400 w-4"></i><input type="checkbox" id="chkGen" checked class="accent-amber-500 w-4 h-4 rounded" onchange="runAdvancedPhysicsSimulation()"> <span>Générateur échelon (E)</span></label>
+            <label class="flex items-center gap-2.5 cursor-pointer"><i class="fa-solid fa-minus text-indigo-400 w-4"></i><input type="checkbox" id="chkRes" class="accent-amber-500 w-4 h-4 rounded" onchange="runAdvancedPhysicsSimulation()"> <span>Résistor (R)</span></label>
+            <label class="flex items-center gap-2.5 cursor-pointer"><i class="fa-solid fa-sliders text-emerald-400 w-4"></i><input type="checkbox" id="chkCap" checked class="accent-amber-500 w-4 h-4 rounded" onchange="runAdvancedPhysicsSimulation()"> <span>Condensateur (C)</span></label>
+            <label class="flex items-center gap-2.5 cursor-pointer"><i class="fa-solid fa-wave-square text-rose-400 w-4"></i><input type="checkbox" id="chkBob" checked class="accent-amber-500 w-4 h-4 rounded" onchange="runAdvancedPhysicsSimulation()"> <span>Bobine (L, r)</span></label>
+          </div>
+          <div class="space-y-3 pt-1">
+            <div>
+              <div class="flex justify-between items-center mb-1"><label class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-bolt text-amber-400"></i> E (V)</label><input type="number" id="numE" value="6" step="0.5" class="w-20 bg-slate-800 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('E', this.value)"></div>
+              <input type="range" id="paramE" min="1" max="12" value="6" step="0.5" class="w-full accent-amber-500 cursor-pointer" oninput="syncSlider('E', this.value)">
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1"><label class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-minus text-indigo-400"></i> R (Ω)</label><input type="number" id="numR" value="10" step="1" class="w-20 bg-slate-800 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('R', this.value)"></div>
+              <input type="range" id="paramR" min="0" max="500" value="10" step="1" class="w-full accent-amber-500 cursor-pointer" oninput="syncSlider('R', this.value)">
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1"><label class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-sliders text-emerald-400"></i> C (µF)</label><input type="number" id="numC" value="100" step="10" class="w-20 bg-slate-800 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('C', this.value)"></div>
+              <input type="range" id="paramC" min="10" max="500" value="100" class="w-full accent-amber-500 cursor-pointer" oninput="syncSlider('C', this.value)">
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1"><label class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-wave-square text-rose-400"></i> L (mH)</label><input type="number" id="numL" value="50" step="5" class="w-20 bg-slate-800 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('L', this.value)"></div>
+              <input type="range" id="paramL" min="10" max="500" value="50" class="w-full accent-amber-500 cursor-pointer" oninput="syncSlider('L', this.value)">
+            </div>
+          </div>
+        `;
+        desc.textContent = "Simulation complète : si R et r sont nuls avec Condensateur + Bobine, le circuit LC oscille indéfiniment sans amortissement !";
+      } else if (tab === 'waves') {
+        title.innerHTML = `<i class="fa-solid fa-wave-square text-cyan-400 mr-2"></i> Comparaison de Deux Ondes Distinctes`;
+        inputT.value = "1.0";
+        controls.innerHTML = `
+          <div class="space-y-4">
+            <div class="p-3.5 bg-slate-800/80 rounded-xl border border-cyan-500/30 space-y-2.5">
+              <span class="text-xs font-bold text-cyan-400 flex items-center gap-2"><i class="fa-solid fa-chart-line"></i> Onde 1 (Cyan)</span>
+              <div>
+                <div class="flex justify-between items-center mb-1"><label class="text-slate-400">Fréquence N1 (Hz)</label><input type="number" id="numF1" value="2.0" step="0.1" class="w-20 bg-slate-900 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('F1', this.value)"></div>
+                <input type="range" id="paramF1" min="0.5" max="10" step="0.5" value="2.0" class="w-full accent-cyan-400 cursor-pointer" oninput="syncSlider('F1', this.value)">
+              </div>
+            </div>
+            <div class="p-3.5 bg-slate-800/80 rounded-xl border border-rose-500/30 space-y-2.5">
+              <span class="text-xs font-bold text-rose-400 flex items-center gap-2"><i class="fa-solid fa-chart-line"></i> Onde 2 (Rose)</span>
+              <div>
+                <div class="flex justify-between items-center mb-1"><label class="text-slate-400">Fréquence N2 (Hz)</label><input type="number" id="numF2" value="4.0" step="0.1" class="w-20 bg-slate-900 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('F2', this.value)"></div>
+                <input type="range" id="paramF2" min="0.5" max="10" step="0.5" value="4.0" class="w-full accent-rose-400 cursor-pointer" oninput="syncSlider('F2', this.value)">
+              </div>
+            </div>
+          </div>
+        `;
+        desc.textContent = "Visualisation côte à côte de deux ondes sinusoïdales aux fréquences distinctes pour les comparer facilement.";
+      } else if (tab === 'radioactive') {
+        title.innerHTML = `<i class="fa-solid fa-radiation text-amber-400 mr-2"></i> Calculateur Radioactivité & Datation`;
+        inputT.value = "5730";
+        controls.innerHTML = `
+          <div class="space-y-3.5">
+            <div>
+              <label class="block text-slate-400 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-atom text-amber-400"></i> Isotope radioactif :</label>
+              <select id="radioIsotope" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl p-2.5 text-xs font-medium focus:outline-none focus:border-amber-500" onchange="updateRadioPreset()">
+                <option value="5730">Carbone 14 (t1/2 = 5730 ans)</option>
+                <option value="8">Iode 131 (t1/2 = 8 jours)</option>
+                <option value="30">Césium 137 (t1/2 = 30 ans)</option>
+                <option value="custom">Personnalisé</option>
+              </select>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1"><label class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-hourglass-half text-amber-400"></i> Demi-vie t1/2</label><input type="number" id="numHalf" value="5730" step="10" class="w-24 bg-slate-800 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('Half', this.value)"></div>
+              <input type="range" id="paramHalf" min="1" max="10000" value="5730" class="w-full accent-amber-500 cursor-pointer" oninput="syncSlider('Half', this.value)">
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1"><label class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-cubes text-indigo-400"></i> Noyaux initiaux N0</label><input type="number" id="numN0" value="10000" step="100" class="w-24 bg-slate-800 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('N0', this.value)"></div>
+              <input type="range" id="paramN0" min="1000" max="50000" step="1000" value="10000" class="w-full accent-amber-500 cursor-pointer" oninput="syncSlider('N0', this.value)">
+            </div>
+            <div class="pt-2 border-t border-slate-800">
+              <div class="flex justify-between items-center mb-1"><label class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-bullseye text-emerald-400"></i> Pourcentage restant (%)</label><input type="number" id="numPct" value="50" step="1" min="1" max="100" class="w-24 bg-slate-800 text-white px-2 py-1 rounded-lg text-xs text-right font-mono border border-slate-700" oninput="syncVal('Pct', this.value)"></div>
+              <input type="range" id="paramPct" min="1" max="100" value="50" class="w-full accent-emerald-500 cursor-pointer" oninput="syncSlider('Pct', this.value)">
+            </div>
+          </div>
+        `;
+        desc.textContent = "Calcul de la constante lambda, du nombre de noyaux restants, de l'activité A(t) et de la datation d'âge.";
+      }
+      runAdvancedPhysicsSimulation();
+    }
+
+    function syncSlider(id, val) {
+      const numEl = document.getElementById('num' + id);
+      if(numEl) numEl.value = val;
+      runAdvancedPhysicsSimulation();
+    }
+    function syncVal(id, val) {
+      const paramEl = document.getElementById('param' + id);
+      if(paramEl) paramEl.value = val;
+      runAdvancedPhysicsSimulation();
+    }
+
+    function updateRadioPreset() {
+      const val = document.getElementById('radioIsotope').value;
+      if(val !== 'custom') {
+        document.getElementById('paramHalf').value = val;
+        document.getElementById('numHalf').value = val;
+      }
+      runAdvancedPhysicsSimulation();
+    }
+
+    function runAdvancedPhysicsSimulation() {
+      const canvas = document.getElementById('physicsCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const width = canvas.width, height = canvas.height;
+      const info = document.getElementById('physExtraInfo');
+      const tInstant = parseFloat(document.getElementById('instantT')?.value) || 0;
+
+      if (currentPhysTab === 'electric') {
+        ctx.strokeStyle = '#334155'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(40, 20); ctx.lineTo(40, height - 30); ctx.lineTo(width - 20, height - 30); ctx.stroke();
+
+        const hasGen = document.getElementById('chkGen')?.checked;
+        const hasRes = document.getElementById('chkRes')?.checked;
+        const hasCap = document.getElementById('chkCap')?.checked;
+        const hasBob = document.getElementById('chkBob')?.checked;
+
+        const E = parseFloat(document.getElementById('paramE')?.value || 6);
+        const R_ext = hasRes ? parseFloat(document.getElementById('paramR')?.value || 10) : 0;
+        const C = parseFloat(document.getElementById('paramC')?.value || 100) * 1e-6;
+        const L = parseFloat(document.getElementById('paramL')?.value || 50) * 1e-3;
+        const R_tot = R_ext;
+
+        let circuitDesc = "Circuit ouvert";
+        let valAtT = 0;
+        let periodVal = 0;
+
+        ctx.strokeStyle = '#f59e0b'; ctx.lineWidth = 2.5; ctx.beginPath();
+        for (let px = 40; px < width - 20; px++) {
+          let t = (px - 40) * 0.0005;
+          let val = 0;
+
+          if (hasGen && !hasRes && hasCap && !hasBob) {
+            circuitDesc = "Circuit RC (Charge)";
+            let tau = R_tot * C || 1e-4;
+            val = E * (1 - Math.exp(-t / tau));
+          } else if (hasGen && hasRes && !hasCap && hasBob) {
+            circuitDesc = "Circuit RL (Établissement)";
+            let tau = L / (R_tot || 1e-4);
+            val = (E / (R_tot || 1)) * (1 - Math.exp(-t / tau));
+          } else if (hasCap && hasBob) {
+            periodVal = 2 * Math.PI * Math.sqrt(L * C);
+            if (R_tot <= 0.01) {
+              circuitDesc = "Circuit LC Idéal (Non amorti)";
+              val = E * Math.cos((2 * Math.PI / periodVal) * t);
+            } else {
+              circuitDesc = "Circuit RLC (Amorti)";
+              let alpha = R_tot / (2 * L);
+              let omega0 = 1 / Math.sqrt(L * C);
+              let omega = Math.sqrt(Math.max(0, omega0*omega0 - alpha*alpha));
+              val = E * Math.exp(-alpha * t) * Math.cos(omega * t);
+            }
+          } else if (hasGen && hasRes && !hasCap && !hasBob) {
+            circuitDesc = "Résistance pure";
+            val = E;
+          } else {
+            circuitDesc = "Configuration libre";
+            val = E * Math.exp(-t * 10);
+          }
+
+          if (Math.abs(t - tInstant) < 0.0005) valAtT = val;
+
+          let py = (height - 30) - ((val + E) / (2 * E + 0.1)) * (height - 50);
+          if (px === 40) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+
+        info.innerHTML = `
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-microchip text-amber-400"></i> Type : <strong class="text-white">${circuitDesc}</strong></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-amber-400"></i> Valeur à t = ${tInstant} s : <strong class="text-amber-400">${valAtT.toFixed(3)} V</strong></div>
+            ${hasCap && hasBob ? `<div class="flex items-center gap-2"><i class="fa-solid fa-wave-square text-emerald-400"></i> Période T : <strong class="text-emerald-400">${(periodVal * 1000).toFixed(2)} ms</strong></div>` : ''}
+            <div class="flex items-center gap-2"><i class="fa-solid fa-minus text-indigo-400"></i> Résistance totale : <strong class="text-indigo-400">${R_tot} Ω</strong></div>
+          </div>
+        `;
+
+      } else if (currentPhysTab === 'waves') {
+        ctx.strokeStyle = '#334155'; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(40, 20); ctx.lineTo(40, height - 30); ctx.lineTo(width - 20, height - 30); ctx.stroke();
+
+        const f1 = parseFloat(document.getElementById('paramF1').value);
+        const f2 = parseFloat(document.getElementById('paramF2').value);
+        let y1AtT = 0, y2AtT = 0;
+
+        ctx.strokeStyle = '#38bdf8'; ctx.lineWidth = 2; ctx.beginPath();
+        for (let px = 40; px < width - 20; px++) {
+          let x = (px - 40) * 0.05;
+          let y1 = Math.sin(2 * Math.PI * f1 * x * 0.2);
+          if (Math.abs(x - tInstant) < 0.05) y1AtT = y1;
+          let py = (height - 30) / 2 - y1 * 35;
+          if (px === 40) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+
+        ctx.strokeStyle = '#f43f5e'; ctx.lineWidth = 2; ctx.beginPath();
+        for (let px = 40; px < width - 20; px++) {
+          let x = (px - 40) * 0.05;
+          let y2 = Math.sin(2 * Math.PI * f2 * x * 0.2);
+          if (Math.abs(x - tInstant) < 0.05) y2AtT = y2;
+          let py = (height - 30) / 2 - y2 * 35;
+          if (px === 40) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+
+        info.innerHTML = `
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-wave-square text-cyan-400"></i> Onde 1 (N1 = ${f1} Hz) à t = ${tInstant} : <strong class="text-cyan-400">${y1AtT.toFixed(3)}</strong></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-wave-square text-rose-400"></i> Onde 2 (N2 = ${f2} Hz) à t = ${tInstant} : <strong class="text-rose-400">${y2AtT.toFixed(3)}</strong></div>
+          </div>
+        `;
+
+      } else if (currentPhysTab === 'radioactive') {
+        const tHalf = parseFloat(document.getElementById('paramHalf').value);
+        const N0 = parseFloat(document.getElementById('paramN0').value);
+        const pct = parseFloat(document.getElementById('paramPct')?.value || 50);
+        const lambda = Math.LN2 / tHalf;
+        const NAtT = N0 * Math.exp(-lambda * tInstant);
+        const activityAtT = lambda * NAtT;
+        const ratio = pct / 100;
+        const datingAge = (tHalf / Math.LN2) * Math.log(1 / ratio);
+
+        ctx.strokeStyle = '#64748b'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(55, 20); ctx.lineTo(55, height - 30); ctx.lineTo(width - 20, height - 30); ctx.stroke();
+
+        ctx.fillStyle = '#94a3b8'; ctx.font = '10px sans-serif';
+        ctx.textAlign = 'right';
+        ctx.fillText(N0, 50, 25);
+        ctx.fillText((N0/2).toFixed(0), 50, (height - 30 + 20)/2 + 3);
+        ctx.fillText('0', 50, height - 25);
+
+        ctx.textAlign = 'center';
+        const maxPlotT = tHalf * 4;
+        const plotWidth = width - 75;
+        for (let i = 0; i <= 4; i++) {
+          let tx = 55 + (i / 4) * plotWidth;
+          ctx.beginPath(); ctx.moveTo(tx, height - 30); ctx.lineTo(tx, height - 25); ctx.stroke();
+          let label = i === 0 ? '0' : (i === 1 ? 't1/2' : i + 't1/2');
+          ctx.fillText(label, tx, height - 12);
+        }
+
+        ctx.strokeStyle = '#f59e0b'; ctx.lineWidth = 2.5; ctx.beginPath();
+        for (let px = 55; px <= width - 20; px++) {
+          let t = ((px - 55) / plotWidth) * maxPlotT;
+          let N = N0 * Math.exp(-lambda * t);
+          let py = (height - 30) - (N / N0) * (height - 50);
+          if (px === 55) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+        }
+        ctx.stroke();
+
+        if (tInstant >= 0 && tInstant <= maxPlotT) {
+          let pxInstant = 55 + (tInstant / maxPlotT) * plotWidth;
+          let pyInstant = (height - 30) - (NAtT / N0) * (height - 50);
+          ctx.strokeStyle = '#38bdf8'; ctx.lineWidth = 1; ctx.setLineDash([4, 4]);
+          ctx.beginPath(); ctx.moveTo(pxInstant, height - 30); ctx.lineTo(pxInstant, pyInstant); ctx.stroke();
+          ctx.setLineDash([]);
+          ctx.fillStyle = '#38bdf8';
+          ctx.beginPath(); ctx.arc(pxInstant, pyInstant, 5, 0, 2 * Math.PI); ctx.fill();
+        }
+
+        info.innerHTML = `
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-atom text-white"></i> Constante lambda : <strong class="text-white">${lambda.toExponential(3)}</strong></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-cubes text-amber-400"></i> Noyaux N(t) à t = ${tInstant} : <strong class="text-amber-400">${NAtT.toFixed(0)}</strong></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-radiation text-emerald-400"></i> Activité A(t) : <strong class="text-emerald-400">${activityAtT.toExponential(3)} Bq</strong></div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-bullseye text-brand-400"></i> Datation (${pct}% restant) : <strong class="text-brand-400">${datingAge.toFixed(1)} unités</strong></div>
+          </div>
+        `;
+      }
+    }
+
+    // ==========================================
+    // GUIDE D'ORIENTATION EXPERT (35 QUESTIONS)
+    // ==========================================
+    const orientationQuestions = [
+      "Aimez-vous résoudre des problèmes mathématiques ardus et manier l'abstraction ?",
+      "Préférez-vous la physique, la chimie et l'expérimentation scientifique concrète ?",
+      "Êtes-vous passionné(e) par la programmation, le code et le développement informatique ?",
+      "Aimez-vous analyser des textes littéraires, philosopher et rédiger des dissertations ?",
+      "Avez-vous une grande appétence pour l'économie, la gestion financière et les marchés ?",
+      "Êtes-vous attiré(e) par les sciences de la vie, la biologie et les métiers de la santé ?",
+      "Aimez-vous concevoir, dessiner et analyser des systèmes mécaniques ou automatisés ?",
+      "Avez-vous un esprit créatif prononcé pour le design, le graphisme ou le web ?",
+      "Préférez-vous un rythme de travail très intense et exigeant (ex: Classes Préparatoires CPGE) ?",
+      "Souhaitez-vous des études courtes et professionnalisantes orientées vers la pratique (ex: DUT / BUT) ?",
+      "Aimez-vous travailler en équipe sur des projets concrets plutôt qu'en autonomie théorique ?",
+      "Êtes-vous très à l'aise à l'oral, en négociations et en langues étrangères (anglais, espagnol) ?",
+      "Avez-vous un intérêt marqué pour la géopolitique, l'histoire et les sciences humaines ?",
+      "Visez-vous l'intégration d'une grande école d'ingénieurs prestigieuse ?",
+      "Visez-vous plutôt une grande école de commerce ou de management ?",
+      "Souhaitez-vous vous orienter vers la recherche scientifique et l'innovation (R&D) ?",
+      "Êtes-vous attiré(e) par la cybersécurité, l'intelligence artificielle et les nouvelles tech ?",
+      "Aimez-vous encadrer des équipes, manager et piloter des projets d'envergure ?",
+      "Préférez-vous une insertion rapide sur le marché du travail après un Bac+3 ?",
+      "Avez-vous l'esprit d'entreprise et l'ambition de créer votre propre start-up ?",
+      "Êtes-vous prêt(e) à faire de longues études supérieures (Master, Doctorat, Grandes Écoles) ?",
+      "Aimez-vous le travail manuel, la manipulation technique et la robotique ?",
+      "Êtes-vous rigoureux(se) dans la structuration de raisonnements logiques et de démonstrations ?",
+      "Avez-vous une sensibilité artistique, culturelle ou architecturale prononcée ?",
+      "Gérez-vous bien la pression, le stress et la compétition lors des concours ou examens ?",
+      "Préférez-vous l'analyse de données chiffrées aux analyses textuelles ?",
+      "Aimez-vous lire des livres, des romans ou suivre l'actualité littéraire et philosophique ?",
+      "Êtes-vous attiré(e) par les métiers de la justice, du droit et de la diplomatie ?",
+      "Aimez-vous l'électronique, les circuits électriques et les énergies renouvelables ?",
+      "Souhaitez-vous effectuer une partie de vos études ou votre carrière à l'international ?",
+      "Aimez-vous aider les autres, soigner, conseiller ou enseigner ?",
+      "Préférez-vous l'autonomie totale dans votre apprentissage au modèle guidé ?",
+      "Avez-vous un sens aigu de l'organisation, de la planification et de la rigueur administrative ?",
+      "Êtes-vous fasciné(e) par la conquête spatiale, l'astronomie et les grandes découvertes ?",
+      "Avez-vous une vision claire de votre futur domaine d'activité professionnelle ?"
+    ];
+
+    let orientationAnswers = {};
+
+    function toggleOrientationGuide() {
+      const panel = document.getElementById('orientationPanel');
+      const icon = document.getElementById('orientationToggleIcon');
+      const isHidden = panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !isHidden);
+      icon.className = isHidden ? 'fa-solid fa-chevron-up text-sm' : 'fa-solid fa-chevron-down text-sm';
+      if (isHidden) renderOrientationQuiz();
+    }
+
+    function renderOrientationQuiz() {
+      const container = document.getElementById('orientationQuizContainer');
+      container.innerHTML = orientationQuestions.map((q, idx) => `
+        <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700/80 space-y-3">
+          <p class="text-xs sm:text-sm font-semibold text-white">Q${idx + 1}. ${q}</p>
+          <div class="flex flex-wrap gap-2">
+            <button onclick="setOrientationAnswer(${idx}, 'oui')" id="btn_${idx}_oui" class="px-3 py-1.5 rounded-lg text-xs font-bold border transition ${orientationAnswers[idx] === 'oui' ? 'bg-emerald-600 text-white border-emerald-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'}">Oui</button>
+            <button onclick="setOrientationAnswer(${idx}, 'non')" id="btn_${idx}_non" class="px-3 py-1.5 rounded-lg text-xs font-bold border transition ${orientationAnswers[idx] === 'non' ? 'bg-rose-600 text-white border-rose-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'}">Non</button>
+            <button onclick="setOrientationAnswer(${idx}, 'nsp')" id="btn_${idx}_nsp" class="px-3 py-1.5 rounded-lg text-xs font-bold border transition ${orientationAnswers[idx] === 'nsp' ? 'bg-amber-600 text-slate-950 border-amber-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'}">Je ne sais pas</button>
+          </div>
+        </div>
+      `).join('') + `
+        <button onclick="calculateOrientationResult()" class="w-full py-4 bg-purple-600 hover:bg-purple-500 text-white font-black rounded-xl text-sm transition shadow-lg shadow-purple-600/30">
+          Analyser mes réponses et découvrir ma filière idéale
+        </button>
+      `;
+    }
+
+    function setOrientationAnswer(qIdx, val) {
+      orientationAnswers[qIdx] = val;
+      ['oui', 'non', 'nsp'].forEach(opt => {
+        const btn = document.getElementById(`btn_${qIdx}_${opt}`);
+        if (!btn) return;
+        btn.className = "px-3 py-1.5 rounded-lg text-xs font-bold border transition bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700";
+        if (opt === val) {
+          if (val === 'oui') btn.className = "px-3 py-1.5 rounded-lg text-xs font-bold border transition bg-emerald-600 text-white border-emerald-500";
+          else if (val === 'non') btn.className = "px-3 py-1.5 rounded-lg text-xs font-bold border transition bg-rose-600 text-white border-rose-500";
+          else btn.className = "px-3 py-1.5 rounded-lg text-xs font-bold border transition bg-amber-600 text-slate-950 border-amber-500";
+        }
+      });
+    }
+
+    function resetOrientationQuiz() {
+      orientationAnswers = {};
+      renderOrientationQuiz();
+      document.getElementById('orientationResultBox').classList.add('hidden');
+    }
+
+    function calculateOrientationResult() {
+      let scores = { cpge: 0, ing: 0, eco: 0, sante: 0, tech: 0, lit: 0, art: 0 };
+      const mapping = {
+        0: { cpge: 3, ing: 2 }, 1: { cpge: 2, ing: 3, tech: 2 }, 2: { ing: 3, tech: 2 },
+        3: { lit: 3 }, 4: { eco: 3 }, 5: { sante: 3 }, 6: { tech: 3, ing: 1 },
+        7: { art: 3 }, 8: { cpge: 3 }, 9: { tech: 3 }, 10: { tech: 2, eco: 1 },
+        11: { eco: 2, lit: 2 }, 12: { lit: 3 }, 13: { cpge: 3, ing: 2 }, 14: { eco: 3 },
+        15: { cpge: 2, sante: 2 }, 16: { ing: 3 }, 17: { eco: 2, ing: 1 }, 18: { tech: 3 },
+        19: { eco: 3, ing: 1 }, 20: { cpge: 3, sante: 2, lit: 2 }, 21: { tech: 3 },
+        22: { cpge: 3, ing: 2 }, 23: { art: 3, lit: 1 }, 24: { cpge: 3, eco: 2 },
+        25: { cpge: 2, ing: 2, eco: 2 }, 26: { lit: 3 }, 27: { lit: 3 }, 28: { tech: 3, ing: 2 },
+        29: { eco: 2, ing: 2 }, 30: { sante: 3 }, 31: { tech: 2, art: 2 }, 32: { eco: 2, cpge: 1 },
+        33: { cpge: 2, ing: 3 }, 34: { eco: 1, ing: 1 }
+      };
+
+      for (let idx in orientationAnswers) {
+        if (orientationAnswers[idx] === 'oui' && mapping[idx]) {
+          for (let cat in mapping[idx]) {
+            scores[cat] = (scores[cat] || 0) + mapping[idx][cat];
+          }
+        }
+      }
+
+      let sorted = Object.keys(scores).map(k => ({ key: k, val: scores[k] })).sort((a, b) => b.val - a.val);
+      let best = sorted[0];
+
+      let descriptions = {
+        cpge: "Classes Préparatoires aux Grandes Écoles (CPGE - MPSI / MP2I / ECG / B/L) : Idéal pour un profil rigoureux, ambitieux et désireux d'intégrer les sommets des écoles d'ingénieurs ou de commerce.",
+        ing: "Écoles d'Ingénieurs Post-Bac : Un cursus en 5 ans orienté vers l'innovation technologique, le numérique, l'IA et la résolution de problèmes concrets.",
+        eco: "Écoles de Commerce & Management / Classes Préparatoires Économiques : Parfait pour le leadership, la gestion d'entreprise, la finance, le marketing et l'entrepreneuriat.",
+        sante: "Facultés de Médecine, Pharmacie, Dentaire & Sciences Biomédicales : Pour les profils passionnés par le soin, la recherche biologique et le secteur médical.",
+        tech: "Filières Universitaires Techniques & Technologiques (BUT / Facultés des Sciences & Techniques) : Axé sur la pratique professionnelle rapide et l'expertise technique de terrain.",
+        lit: "Filières Littéraires, Droits, Sciences Politiques & Langues : Valorise l'expression écrite et orale, la philosophie, la géopolitique et la culture générale.",
+        art: "Écoles d'Art, Design, Architecture & Création Numérique : Pour exprimer pleinement votre créativité visuelle, architecturale et artistique."
+      };
+
+      const resBox = document.getElementById('orientationResultBox');
+      const resContent = document.getElementById('orientationResultContent');
+      resContent.innerHTML = `
+        <p class="text-base font-extrabold text-amber-300">🎯 Filière principale recommandée :</p>
+        <div class="p-4 bg-slate-950 rounded-xl border border-purple-500/30 text-white font-bold text-sm">
+          ${descriptions[best.key] || best.key}
+        </div>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Ce test expert évalue vos aptitudes sur 35 axes croisés (scientifique, littéraire, technique, managérial). Votre score le plus élevé valide cette orientation stratégique pour sécuriser votre avenir post-bac.
+        </p>
+      `;
+      resBox.classList.remove('hidden');
+      resBox.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ==========================================
+    // CAHIER DE NOTES & SUIVI PERSONNEL
+    // ==========================================
+    let studentNotes = {};
+
+    function toggleNotebook() {
+      const panel = document.getElementById('notebookPanel');
+      const icon = document.getElementById('notebookToggleIcon');
+      const isHidden = panel.classList.contains('hidden');
+      panel.classList.toggle('hidden', !isHidden);
+      icon.className = isHidden ? 'fa-solid fa-chevron-up text-sm' : 'fa-solid fa-chevron-down text-sm';
+      if (isHidden) renderNotebook();
+    }
+
+    function renderNotebook() {
+      const container = document.getElementById('notebookCoursesList');
+      if (!container) return;
+
+      container.innerHTML = coursesData.map(c => {
+        let saved = studentNotes[c.id] || { text: '', eval: 'non-evalue' };
+        return `
+          <div class="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-5 space-y-4 shadow">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 border border-teal-500/30 uppercase">${c.category}</span>
+                <h4 class="text-sm font-bold text-white mt-1">${c.title}</h4>
+              </div>
+              <span class="text-xs font-mono text-slate-400">ID: #${c.id}</span>
+            </div>
+            <div class="space-y-1.5">
+              <label class="block text-xs font-semibold text-slate-300">Auto-évaluation du chapitre :</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button onclick="setCourseEval('${c.id}', 'maitre')" id="eval_${c.id}_maitre" class="py-2 px-2 text-[11px] font-bold rounded-xl border transition ${saved.eval === 'maitre' ? 'bg-emerald-600 text-white border-emerald-500 shadow' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'}">
+                  <i class="fa-solid fa-check-double mr-1"></i> Maîtrisé
+                </button>
+                <button onclick="setCourseEval('${c.id}', 'cours')" id="eval_${c.id}_cours" class="py-2 px-2 text-[11px] font-bold rounded-xl border transition ${saved.eval === 'cours' ? 'bg-amber-600 text-slate-950 border-amber-500 shadow' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'}">
+                  <i class="fa-solid fa-clock-rotate-left mr-1"></i> En cours
+                </button>
+                <button onclick="setCourseEval('${c.id}', 'revoir')" id="eval_${c.id}_revoir" class="py-2 px-2 text-[11px] font-bold rounded-xl border transition ${saved.eval === 'revoir' ? 'bg-rose-600 text-white border-rose-500 shadow' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'}">
+                  <i class="fa-solid fa-triangle-exclamation mr-1"></i> À revoir
+                </button>
+              </div>
+            </div>
+            <div class="space-y-1">
+              <label class="block text-xs font-semibold text-slate-300">Mes notes personnelles / Remarques :</label>
+              <textarea id="note_${c.id}" oninput="saveCourseNote('${c.id}')" rows="2" placeholder="Ajouter une remarque, une formule ou une difficulté..." class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl p-2.5 text-xs focus:outline-none focus:border-teal-500">${saved.text}</textarea>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setCourseEval(cId, evalType) {
+      if (!studentNotes[cId]) studentNotes[cId] = { text: '', eval: 'non-evalue' };
+      studentNotes[cId].eval = evalType;
+      localStorage.setItem('romarbac_student_notes', JSON.stringify(studentNotes));
+      renderNotebook();
+    }
+
+    function saveCourseNote(cId) {
+      const textVal = document.getElementById(`note_${cId}`).value;
+      if (!studentNotes[cId]) studentNotes[cId] = { text: '', eval: 'non-evalue' };
+      studentNotes[cId].text = textVal;
+      localStorage.setItem('romarbac_student_notes', JSON.stringify(studentNotes));
+    }
+
+    // ==========================================
+    // COURS & FIREBASE (SYNCHRONISÉS EN LIGNE)
+    // ==========================================
+    let coursesData = [];
+    let activeCategory = "Tous", currentUser = null, activeTabs = {};
+
+    async function loadCoursesFromFirebase() {
+      try {
+        const snap = await window.fs.getDocs(window.fs.collection(window.db, "courses"));
+        if (!snap.empty) {
+          coursesData = snap.docs.map(docSnap => ({ id: docSnap.id, ...docSnap.data() }));
+        } else {
+          const defaultCourses = [
+            {
+              id: "1", category: "Philosophie", title: "Chapitre 1 - La Vérité et le Vivant",
+              description: "Notions clés, dissertations guidées et repères philosophiques.",
+              resources: { cours: "dossier-pdf/philo-ch1-cours.pdf", exercice: "dossier-pdf/philo-ch1-exo.pdf", defi: "dossier-pdf/philo-ch1-defi.pdf" }
+            },
+            {
+              id: "2", category: "Mathématiques", title: "Chapitre 1 - limites et continuité",
+              description: "Limites, continuité, arctan , TVI , dichotomie.",
+              resources: { cours: "ressources/MATH/continuite/continuite-cours.pdf", exercice: "ressources/MATH/continuite/continuite-exo.pdf", defi: "ressources/MATH/continuite/continuite-defi.png" }
+            },
+            {
+              id: "4", category: "Physique-Chimie", title: "Module 1 - Mouvement et Forces",
+              description: "Vecteur vitesse, accélération et lois de Newton.",
+              resources: { cours: "ressources/pc-mod1-cours.pdf", exercice: "ressources/pc-mod1-exo.pdf", defi: "" }
+            }
+          ];
+          for (let c of defaultCourses) {
+            await window.fs.setDoc(window.fs.doc(window.db, "courses", String(c.id)), c);
+          }
+          coursesData = defaultCourses;
+        }
+      } catch (err) {
+        console.error("Erreur chargement cours:", err);
+      }
+      renderCategories();
+      renderCourses();
+      if (currentUser && currentUser.role === 'admin') {
+        populateEditCourseSelect();
+      }
+    }
+
+    async function handleAddCourse(e) {
+      e.preventDefault();
+      const category = document.getElementById('newCourseCategory').value.trim();
+      const title = document.getElementById('newCourseTitle').value.trim();
+      const description = document.getElementById('newCourseDesc').value.trim();
+      const coursUrl = document.getElementById('newCourseCoursUrl').value.trim();
+      const exoUrl = document.getElementById('newCourseExoUrl').value.trim();
+      const defiUrl = document.getElementById('newCourseDefiUrl').value.trim();
+
+      const newId = 'COURSE-' + Date.now();
+      const newCourse = {
+        id: newId,
+        category: category,
+        title: title,
+        description: description,
+        resources: { cours: coursUrl, exercice: exoUrl, defi: defiUrl }
+      };
+
+      try {
+        await window.fs.setDoc(window.fs.doc(window.db, "courses", newId), newCourse);
+        coursesData.push(newCourse);
+
+        document.getElementById('newCourseCategory').value = '';
+        document.getElementById('newCourseTitle').value = '';
+        document.getElementById('newCourseDesc').value = '';
+        document.getElementById('newCourseCoursUrl').value = '';
+        document.getElementById('newCourseExoUrl').value = '';
+        document.getElementById('newCourseDefiUrl').value = '';
+
+        renderCategories();
+        renderCourses();
+        populateEditCourseSelect();
+        alert("La nouvelle leçon a été publiée en ligne avec succès pour tout le monde !");
+      } catch (err) {
+        alert("Erreur lors de l'enregistrement sur Firebase.");
+      }
+    }
+
+    async function handleEditCourse(e) {
+      e.preventDefault();
+      const selectId = document.getElementById('editCourseSelect').value;
+      const course = coursesData.find(c => c.id == selectId);
+      if (!course) return;
+
+      course.category = document.getElementById('editCourseCategory').value.trim();
+      course.title = document.getElementById('editCourseTitle').value.trim();
+      course.resources.cours = document.getElementById('editCourseCoursUrl').value.trim();
+      course.resources.exercice = document.getElementById('editCourseExoUrl').value.trim();
+      course.resources.defi = document.getElementById('editCourseDefiUrl').value.trim();
+
+      try {
+        await window.fs.updateDoc(window.fs.doc(window.db, "courses", String(course.id)), {
+          category: course.category,
+          title: course.title,
+          resources: course.resources
+        });
+
+        renderCategories();
+        renderCourses();
+        populateEditCourseSelect();
+        alert("La leçon a été mise à jour en ligne avec succès pour tout le monde !");
+      } catch (err) {
+        console.error("Erreur mise à jour:", err);
+        alert("Erreur lors de la mise à jour sur Firebase.");
+      }
+    }
+
+    async function handleDeleteCourse() {
+      const selectId = document.getElementById('editCourseSelect').value;
+      const course = coursesData.find(c => c.id == selectId);
+      if (!course) return;
+
+      if (!confirm(`Voulez-vous vraiment supprimer définitivement la leçon "${course.title}" ?`)) return;
+
+      try {
+        await window.fs.deleteDoc(window.fs.doc(window.db, "courses", String(course.id)));
+        coursesData = coursesData.filter(c => c.id !== course.id);
+
+        renderCategories();
+        renderCourses();
+        populateEditCourseSelect();
+        alert("La leçon a été supprimée en ligne avec succès !");
+      } catch (err) {
+        console.error("Erreur suppression:", err);
+        alert("Erreur lors de la suppression sur Firebase.");
+      }
+    }
+
+    function getDeviceId() {
+      let id = localStorage.getItem('romarbac_device_id');
+      if (!id) {
+        id = 'DEV-' + Math.random().toString(36).substring(2, 10).toUpperCase() + '-' + Date.now().toString().slice(-4);
+        localStorage.setItem('romarbac_device_id', id);
+      }
+      return id;
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      hideAlert();
+      const user = document.getElementById('username').value.trim().toLowerCase();
+      const pass = document.getElementById('password').value;
+      const device = getDeviceId();
+
+      try {
+        const userRef = window.fs.doc(window.db, "users", user);
+        const snap = await window.fs.getDoc(userRef);
+
+        if (!snap.exists() || snap.data().password !== pass) {
+          return showAlert("Identifiant ou mot de passe incorrect.", "bg-rose-500/10 text-rose-400 border border-rose-500/20");
+        }
+
+        const data = snap.data();
+        if (data.role !== 'admin') {
+          if (!data.boundDevice) {
+            await window.fs.updateDoc(userRef, { boundDevice: device });
+            data.boundDevice = device;
+          } else if (data.boundDevice !== device) {
+            return showAlert(`❌ Appareil non autorisé. ID : (${device}).`, "bg-rose-500/10 text-rose-400 border border-rose-500/20");
+          }
+        }
+
+        currentUser = { username: user, ...data };
+        sessionStorage.setItem('romarbac_active_session', JSON.stringify(currentUser));
+        closeModal('quickLoginModal');
+        showDashboard();
+      } catch (err) {
+        showAlert("Erreur de connexion au serveur Firebase.", "bg-rose-500/10 text-rose-400 border border-rose-500/20");
+      }
+    }
+
+    function handleLogout() {
+      currentUser = null;
+      sessionStorage.removeItem('romarbac_active_session');
+      document.getElementById('dashboardView').classList.add('hidden');
+      document.getElementById('loginView').classList.remove('hidden');
+      document.getElementById('loginForm').reset();
+      hideAlert();
+    }
+
+    function showDashboard() {
+      document.getElementById('loginView').classList.add('hidden');
+      document.getElementById('dashboardView').classList.remove('hidden');
+      document.getElementById('displayUsername').textContent = currentUser.username;
+      document.getElementById('displayRole').textContent = currentUser.role === 'admin' ? 'Administrateur' : 'Élève';
+      
+      const isAdmin = currentUser.role === 'admin';
+      document.getElementById('adminPanel').classList.toggle('hidden', !isAdmin);
+      if (isAdmin) {
+        renderStudentsList();
+        populateEditCourseSelect();
+      }
+      renderCategories();
+      renderCourses();
+    }
+
+    function renderCategories() {
+      const cats = ["Tous", ...new Set(coursesData.map(c => c.category))];
+      document.getElementById('categoryFilters').innerHTML = cats.map(cat => `
+        <button onclick="setCategory('${cat}')" class="px-4 py-2 text-xs font-semibold rounded-xl border transition ${
+          activeCategory === cat ? 'bg-brand-600 text-white border-brand-500 shadow-md' : 'bg-slate-900/60 text-slate-300 border-slate-700 hover:bg-slate-700'
+        }">${cat}</button>
+      `).join('');
+    }
+
+    function setCategory(cat) { activeCategory = cat; renderCategories(); renderCourses(); }
+    function setCourseTab(id, tab) { activeTabs[id] = tab; renderCourses(); }
+    function openResource(url) { if (url) window.open(url, '_blank'); }
+
+    function renderCourses() {
+      const container = document.getElementById('coursesContainer');
+      const courses = activeCategory === "Tous" ? coursesData : coursesData.filter(c => c.category === activeCategory);
+
+      if (!courses.length) {
+        container.innerHTML = `<p class="col-span-full text-center text-slate-400 py-8">Aucun cours trouvé.</p>`;
+        return;
+      }
+
+      const tabs = [
+        { key: 'cours', label: 'Cours', icon: 'fa-book' },
+        { key: 'exercice', label: 'Exercice', icon: 'fa-pen-to-square' },
+        { key: 'defi', label: 'Défi', icon: 'fa-trophy' }
+      ];
+
+      container.innerHTML = courses.map(course => {
+        const curTab = activeTabs[course.id] || 'cours';
+        const link = course.resources?.[curTab];
+
+        return `
+          <div class="bg-slate-800 dark:bg-slate-800 border border-slate-700 rounded-2xl p-5 flex flex-col justify-between space-y-4 hover:border-slate-600 transition">
+            <div class="space-y-3">
+              <span class="inline-block px-3 py-1 text-xs font-bold bg-brand-500/20 text-brand-400 border border-brand-500/30 rounded-lg">${course.category}</span>
+              <h3 class="text-lg font-bold text-white dark:text-white">${course.title}</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">${course.description}</p>
+            </div>
+            <div class="pt-3 border-t border-slate-700/60 space-y-3">
+              <div class="grid grid-cols-3 gap-1 bg-slate-900/80 p-1 rounded-xl border border-slate-700/50">
+                ${tabs.map(t => `
+                  <button onclick="setCourseTab('${course.id}', '${t.key}')" class="py-1.5 px-1 text-[11px] font-medium rounded-lg transition flex flex-col items-center justify-center gap-1 ${
+                    curTab === t.key ? 'bg-brand-600 text-white shadow' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                  }">
+                    <i class="fa-solid ${t.icon}"></i><span>${t.label}</span>
+                  </button>
+                `).join('')}
+              </div>
+              <div>
+                ${link ? `
+                  <button onclick="openResource('${link}')" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold rounded-xl transition shadow-md">
+                    <i class="fa-solid ${link.endsWith('.pdf') ? 'fa-file-pdf' : 'fa-file-image'}"></i>
+                    <span>Ouvrir ${tabs.find(t => t.key === curTab).label}</span>
+                  </button>
+                ` : `
+                  <button disabled class="w-full py-2.5 px-4 bg-slate-900/50 text-slate-500 text-xs font-medium rounded-xl border border-slate-700/50 cursor-not-allowed">Non disponible</button>
+                `}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function populateEditCourseSelect() {
+      const select = document.getElementById('editCourseSelect');
+      if (!select) return;
+      select.innerHTML = coursesData.map(c => `<option value="${c.id}">[${c.category}] ${c.title}</option>`).join('');
+      loadCourseIntoEditForm();
+    }
+
+    function loadCourseIntoEditForm() {
+      const selectId = document.getElementById('editCourseSelect').value;
+      const course = coursesData.find(c => c.id == selectId);
+      if (!course) return;
+
+      document.getElementById('editCourseCategory').value = course.category || '';
+      document.getElementById('editCourseTitle').value = course.title || '';
+      document.getElementById('editCourseCoursUrl').value = course.resources?.cours || '';
+      document.getElementById('editCourseExoUrl').value = course.resources?.exercice || '';
+      document.getElementById('editCourseDefiUrl').value = course.resources?.defi || '';
+    }
+
+    async function renderStudentsList() {
+      const container = document.getElementById('studentsList');
+      if (!container) return;
+      try {
+        const snap = await window.fs.getDocs(window.fs.collection(window.db, "users"));
+        if (snap.empty) return container.innerHTML = '<p class="text-sm text-slate-400 py-2">Aucun compte.</p>';
+        container.innerHTML = snap.docs.map(docSnap => {
+          const acc = docSnap.data(), username = docSnap.id, isAdmin = acc.role === 'admin';
+          return `
+            <div class="py-3 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 last:border-none">
+              <div class="space-y-1">
+                <div class="flex items-center space-x-2">
+                  <span class="font-bold text-white text-sm">${username}</span>
+                  <span class="px-2 py-0.5 text-[10px] font-bold rounded-full ${isAdmin ? 'bg-amber-500/20 text-amber-400 border border-amber-500/30' : 'bg-slate-700 text-slate-300'}">${isAdmin ? 'ADMIN' : 'ÉLÈVE'}</span>
+                </div>
+                <p class="text-xs text-slate-400">
+                  ${isAdmin ? 'Accès Administrateur' : `Pass : <span class="font-mono text-slate-300">${acc.password}</span> | App : <span class="font-mono text-cyan-400">${acc.boundDevice || 'Non lié'}</span>`}
+                </p>
+              </div>
+              ${!isAdmin ? `
+                <div class="flex items-center gap-2">
+                  <button onclick="resetStudentDevice('${username}')" class="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold rounded-lg transition shadow flex items-center gap-1.5" title="Réinitialiser l'appareil lié">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>Libérer App</span>
+                  </button>
+                  <button onclick="deleteStudentAccount('${username}')" class="px-3 py-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold rounded-lg transition shadow flex items-center gap-1.5" title="Supprimer le compte">
+                    <i class="fa-solid fa-trash"></i>
+                    <span>Supprimer</span>
+                  </button>
+                </div>
+              ` : ''}
+            </div>
+          `;
+        }).join('');
+      } catch (err) {
+        container.innerHTML = '<p class="text-xs text-rose-400 py-2">Erreur lors du chargement des élèves.</p>';
+      }
+    }
+
+    async function resetStudentDevice(username) {
+      if (!confirm(`Voulez-vous vraiment réinitialiser l'appareil lié pour l'élève "${username}" ?`)) return;
+      try {
+        await window.fs.updateDoc(window.fs.doc(window.db, "users", username), { boundDevice: null });
+        alert(`Appareil réinitialisé avec succès pour ${username}.`);
+        renderStudentsList();
+      } catch (err) {
+        alert("Erreur lors de la réinitialisation de l'appareil.");
+      }
+    }
+
+    async function deleteStudentAccount(username) {
+      if (!confirm(`Êtes-vous sûr de vouloir supprimer définitivement le compte de "${username}" ?`)) return;
+      try {
+        await window.fs.deleteDoc(window.fs.doc(window.db, "users", username));
+        alert(`Compte de ${username} supprimé avec succès.`);
+        renderStudentsList();
+      } catch (err) {
+        alert("Erreur lors de la suppression du compte.");
+      }
+    }
+
+    async function handleAddStudent(e) {
+      e.preventDefault();
+      const user = document.getElementById('newStudentUser').value.trim().toLowerCase();
+      const pass = document.getElementById('newStudentPass').value.trim();
+      try {
+        const userRef = window.fs.doc(window.db, "users", user);
+        if ((await window.fs.getDoc(userRef)).exists()) return alert("Cet identifiant existe déjà !");
+        await window.fs.setDoc(userRef, { password: pass, role: 'student', boundDevice: null });
+        document.getElementById('newStudentUser').value = '';
+        document.getElementById('newStudentPass').value = '';
+        renderStudentsList();
+      } catch (err) { alert("Erreur."); }
+    }
+
+    function showAlert(msg, classes) {
+      const box = document.getElementById('loginAlert');
+      box.className = `p-4 rounded-xl text-xs ${classes}`;
+      box.textContent = msg;
+      box.classList.remove('hidden');
+    }
+    function hideAlert() { document.getElementById('loginAlert').classList.add('hidden'); }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('localDeviceIdDisplay').textContent = getDeviceId();
+      const savedNotes = localStorage.getItem('romarbac_student_notes');
+      if (savedNotes) {
+        try { studentNotes = JSON.parse(savedNotes); } catch(e){}
+      }
+      
+      loadCoursesFromFirebase();
+
+      const saved = sessionStorage.getItem('romarbac_active_session');
+      if (saved) { currentUser = JSON.parse(saved); showDashboard(); }
+    });
+  </script>
+</body>
+</html>
